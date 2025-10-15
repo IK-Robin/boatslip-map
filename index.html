@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>interactive map </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    #mapTitle {
+      width: max-content;
+      padding: 10px 15px;
+      margin: 0 auto;
+      max-width: 250px;
+    }
+
+    #ikr_toltipMove {
+      position: absolute;
+      display: none;
+      min-width: 158px;
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      margin: 0 auto;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+
+      line-height: 22px;
+      background-color: #113034;
+      z-index: 55;
+      pointer-events: none;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      border-radius: 6px;
+      border: 6px solid #c1b09f;
+    }
+
+    /* Paragraph styles */
+    #ikr_toltipMove p {
+      margin: 4px 0;
+      font-size: 16px;
+      color: #d3b683;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      #ikr_toltipMove {
+        font-size: 14px;
+        max-width: 200px;
+        padding: 8px;
+      }
+
+      #ikr_toltipMove p {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #ikr_toltipMove {
+        font-size: 13px;
+        max-width: 160px;
+        padding: 6px;
+      }
+
+      #ikr_toltipMove p {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    .ikr_svg_container {
+      width: 80%;
+      height: auto;
+
+      margin: 0 auto;
+    }
+
+    .availableLot {
+      fill: green !important;
+      opacity: 0.6 !important;
+
+    }
+
+    .soldLot {
+      fill: red !important;
+      opacity: 0.6 !important;
+
+    }
+
+    .reservedLot {
+      fill: orange !important;
+
+    }
+
+    .controls {
+      position: absolute;
+      top: 17px;
+      left: 11%;
+      z-index: 100;
+    }
+
+    .ikr_map5 {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ikr_svg_container">
+    <div class="ikr_map5">
+      <div class="controls">
+        <button id="zoom_in">Zoom In</button>
+        <button id="zoom_out">Zoom Out</button>
+        <button id="reset">Reset</button>
+      </div>
+      <?xml version="1.0" encoding="UTF-8"?><svg id="ikr_svg" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 8192 4902">
+        <defs>
+          <style>
+            .cls-1 {
+              opacity: 0;
+            }
+
+            .cls-1,
+            .cls-2 {
+              fill: #fff;
+            }
+
+            .cls-3 {
+              fill: none;
+              stroke: #fff;
+              stroke-miterlimit: 10;
+              stroke-width: 11px;
+            }
+
+            .cls-2 {
+              font-family: MyriadPro-Regular, 'Myriad Pro';
+              font-size: 40.65px;
+            }
+          </style>
+        </defs>
+        <g id="Layer_1">
+          <image width="8192" height="4902" xlink:href="./Fin Marina Aerial Only.jpg" />
+        </g>
+        <g id="Layer_2">
+          <rect id="_1" class="cls-1" x="614.56" y="1299.68" width="67.4" height="214.47"
+            transform="translate(269.98 -95.27) rotate(10.6)" />
+          <rect id="_2" class="cls-1" x="745.29" y="1332.36" width="67.4" height="214.47"
+            transform="translate(278.23 -118.77) rotate(10.6)" />
+          <rect id="_3" class="cls-1" x="872.62" y="1356.2" width="67.4" height="214.47"
+            transform="translate(284.79 -141.79) rotate(10.6)" />
+          <rect id="_4" class="cls-1" x="1011.01" y="1396.96" width="67.4" height="214.47"
+            transform="translate(294.65 -166.57) rotate(10.6)" />
+          <rect id="_5" class="cls-1" x="1146.49" y="1422.32" width="67.4" height="214.47"
+            transform="translate(301.64 -191.06) rotate(10.6)" />
+          <rect id="_6" class="cls-1" x="1281.36" y="1474.42" width="67.4" height="214.47"
+            transform="translate(381.84 -251.41) rotate(12.76)" />
+          <rect id="_7" class="cls-1" x="1423.58" y="1501.26" width="67.4" height="214.47"
+            transform="translate(391.28 -282.16) rotate(12.76)" /><text class="cls-2"
+            transform="translate(686.97 1449.21) rotate(-79.4)">
+            <tspan x="0" y="0">20-19</tspan>
+          </text><text class="cls-2" transform="translate(822.2 1472.66) rotate(-79.4)">
+            <tspan x="0" y="0">18-17</tspan>
+          </text><text class="cls-2" transform="translate(956.09 1504.19) rotate(-79.4)">
+            <tspan x="0" y="0">16-15</tspan>
+          </text><text class="cls-2" transform="translate(1087.96 1529.56) rotate(-79.4)">
+            <tspan x="0" y="0">14-13</tspan>
+          </text><text class="cls-2" transform="translate(1229.32 1560.31) rotate(-79.4)">
+            <tspan x="0" y="0">12-11</tspan>
+          </text><text class="cls-2" transform="translate(1364.86 1577.1) rotate(-79.4)">
+            <tspan x="0" y="0">10-9</tspan>
+          </text><text class="cls-2" transform="translate(1506.66 1599.34) rotate(-79.4)">
+            <tspan x="0" y="0">8-7</tspan>
+          </text>
+          <line class="cls-3" x1="625.36" y1="1504.19" x2="662.79" y2="1343.49" />
+          <line class="cls-3" x1="760.27" y1="1529.56" x2="797.7" y2="1368.86" />
+          <line class="cls-3" x1="898.16" y1="1560.31" x2="935.59" y2="1399.61" />
+          <line class="cls-3" x1="1026" y1="1600.78" x2="1063.43" y2="1440.08" />
+          <line class="cls-3" x1="1169.44" y1="1627.83" x2="1199.44" y2="1465.58" />
+          <line class="cls-3" x1="1300.65" y1="1657.61" x2="1336.62" y2="1496.58" />
+          <line class="cls-3" x1="1441.93" y1="1697.87" x2="1472.64" y2="1535.76" />
+        </g>
+      </svg>
+
+
+      <div id="ikr_toltipMove">
+        <div id="mapTitle"></div>
+      </div>
+    </div>
+
+    <div class="ikr_rv_detail" id="ikr_rv_detail">
+      <div style="position: relative">
+        <div id="detail_img" class="ikr_detail_img">
+          <img src="" alt="" id="map_img" />
+        </div>
+        <div class="map_details">
+          <p id="plotId" class="map_title"></p>
+
+          <div id="detail_des" class="detail_des"></div>
+
+          <a id="ikr_btnTxt" style="display:none" class="ikr_map_tooltip_button" target="_blank" href="">
+            Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="ikr_map_tooltip" id="ikr_map_tooltip"></div>
+
+  </div>
+</body>
+<!-- <script src="./mapDataObj.js"></script> -->
+<!-- <script src="./script.js"></script> -->
+<script src="./ikr-zoom.js"></script>
+
+</html>
+<script>
+
+  const avalible_color = "green";
+  const sold_color = "red";
+
+
+
+
+  const mapData = [
+    {
+      "id": "_1",
+      "lotNumber": "19-20",
+      "PriceBZD": 950000.0,
+      "PriceUSD": 475000.0,
+      "availability": "Sold",
+      "status": "Sold",
+      "link": "https://google.com",
+      "use": "COMMERCIAL",
+      "source": "COMMERCIAL",
+      "size": "0.42 AC."
+    },
+    {
+      "id": "_2",
+      "lotNumber": "17-18",
+      "PriceBZD": 750000.0,
+      "PriceUSD": 375000.0,
+      "availability": "Sold",
+      "status": "Sold",
+      "link": "https://google.com",
+      "use": "COMMERCIAL",
+      "source": "COMMERCIAL",
+      "size": "0.32 AC"
+    },
+    {
+      "id": "_3",
+      "lotNumber": "15-16",
+      "PriceBZD": 750000.0,
+      "PriceUSD": 375000.0,
+      "availability": "Sold",
+      "status": "Sold",
+      "link": "https://google.com",
+      "use": "COMMERCIAL",
+      "source": "COMMERCIAL",
+      "size": "0.32 AC"
+    },
+    {
+      "id": "_4",
+      "lotNumber": "13-14",
+      "PriceBZD": 750000.0,
+      "PriceUSD": 495000.0,
+      "availability": "Available",
+      "status": "Available",
+      "link": "https://google.com",
+      "use": "COMMERCIAL",
+      "source": "COMMERCIAL",
+      "size": "0.32 AC"
+    },
+    {
+      "id": "_5",
+      "lotNumber": "11-12",
+      "PriceBZD": 750000.0,
+      "PriceUSD": 495000.0,
+      "availability": "Available",
+      "status": "Available",
+      "link": "https://google.com",
+      "use": "COMMERCIAL",
+      "source": "COMMERCIAL",
+      "size": "0.32 AC"
+    },
+    {
+      "id": "_6",
+      "lotNumber": "9-10",
+      "PriceBZD": 750000.0,
+      "PriceUSD": 495000.0,
+      "availability": "Available",
+      "status": "Available",
+      "link": "https://google.com",
+      "use": "COMMERCIAL",
+      "source": "COMMERCIAL",
+      "size": "0.32 AC"
+    },
+
+  ];
+
+
+
+
+
+
+
+
+
+  let mapId = [
+    "_1",
+    "_2",
+    "_3",
+    "_4",
+    "_5",
+    "_6",
+
+  ];
+
+
+  const ikr_btnTxt = document.getElementById('ikr_btnTxt');
+  // get the map id
+  const ikr_svg = document.getElementById(
+    'ikr_svg'
+  )
+
+  ikrZoom(ikr_svg);
+  const Shape = ikr_svg.getElementById('Shape')
+
+
+  function getAllChildNodeIds(svgElement) {
+    const childNodeIds = [];
+
+    // Iterate through all child elements of the SVG
+    for (const childElement of svgElement.children) {
+      // Check if the child element has an ID attribute
+      if (childElement.id) {
+        childNodeIds.push(childElement.id);
+      }
+
+      // Recursively process child elements
+      childNodeIds.push(...getAllChildNodeIds(childElement));
+    }
+
+    return childNodeIds;
+  }
+  // console.log(getAllChildNodeIds(Shape));
+
+
+  // map data
+
+  const tooltipMove = document.getElementById("ikr_toltipMove");
+
+  // (Optional) if you need this later:
+  // const Shape = ikr_svg.getElementById('Shape');
+
+
+
+  // ====== Utilities ======
+  function getClientPoint(ev) {
+    if (ev.touches && ev.touches[0]) {
+      return { x: ev.touches[0].clientX, y: ev.touches[0].clientY };
+    }
+    if (ev.changedTouches && ev.changedTouches[0]) {
+      return { x: ev.changedTouches[0].clientX, y: ev.changedTouches[0].clientY };
+    }
+    return { x: ev.clientX, y: ev.clientY };
+  }
+
+  // Smart positioning inside tooltip's offsetParent
+  function placeSmartInContainer(el, ev, pad = 8) {
+    el.style.position = "absolute";
+
+    const parent = el.offsetParent || document.body;
+    const rect = parent.getBoundingClientRect();
+
+    const cs = getComputedStyle(parent);
+    const padL = parseFloat(cs.paddingLeft) || 0;
+    const padT = parseFloat(cs.paddingTop) || 0;
+    const padR = parseFloat(cs.paddingRight) || 0;
+    const padB = parseFloat(cs.paddingBottom) || 0;
+
+    const prevDisp = el.style.display;
+    const prevVis = el.style.visibility;
+    el.style.visibility = "hidden";
+    el.style.display = "block";
+
+    const w = el.offsetWidth;
+    const h = el.offsetHeight;
+
+    const pt = getClientPoint(ev);
+    const relX = pt.x - rect.left - padL;
+    const relY = pt.y - rect.top - padT;
+
+    const contentW = rect.width - padL - padR;
+    const contentH = rect.height - padT - padB;
+
+    let left = relX + pad;
+    let top = relY + pad;
+
+    if (left + w > contentW) left = relX - w - pad;
+    left = Math.max(0, Math.min(left, contentW - w));
+
+    if (top + h > contentH) top = relY - h - pad;
+    top = Math.max(0, Math.min(top, contentH - h));
+
+    el.style.left = (left + padL) + "px";
+    el.style.top = (top + padT) + "px";
+
+    el.style.visibility = prevVis || "visible";
+    el.style.display = prevDisp || "block";
+  }
+
+  function isMobile() {
+    return /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
+  // ====== INIT COLORS ON LOAD ======
+  window.addEventListener("load", () => {
+    mapId.forEach((id) => {
+      const el = document.querySelector(`#${id}`);
+      if (!el) return;
+      const data = mapData.find(d => d.id === id);
+      if (data && data.mapColor) {
+        el.style.fill = `#${data.mapColor}`;
+      }
+    });
+  });
+
+  // ====== TOOLTIP RENDER ======
+  function renderTooltipContent(mapD) {
+
+    // Clean number and add commas
+    function cleanNumber(str) {
+      if (str == null) return 0; // handles null & undefined
+      let num = parseFloat(String(str).replace(/[^0-9.-]+/g, "")) || 0;
+      return num.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+
+    let statusStyle = "font-weight: bold;";
+    if (mapD.status && mapD.status.toLowerCase() === "available") {
+      statusStyle = "color: #d3b683; font-weight: bold;";
+    } else if (mapD.status && mapD.status.toLowerCase() === "sold") {
+      statusStyle = "color: red; font-weight: bold;";
+    } else if (mapD.status && mapD.status.toLowerCase() === "Rerserved") {
+      statusStyle = "color: #FFD700; font-weight: bold;";
+    }
+
+    // <p><strong>Lot Number:</strong> ${String(mapD.id || "").replace(/_/g, "")}</p>
+    return `
+    <div style="font-family: Arial, sans-serif; line-height: 1.4;">
+      <p ><strong style="text-transform: capitalize;">Boat Slip:</strong> <span style="text-transform:uppercase;" > ${mapD.use ?? ""}</span></p>
+      <p><strong>Slip Number:</strong> ${mapD.lotNumber}</p>
+ 
+      <p><strong>Price USD:</strong> <span style="font-weight:bold;">$${cleanNumber(mapD.PriceUSD)}</span></p>
+      <p><strong>Status:</strong> <span style="${statusStyle}">${(mapD.status ?? "").toString().toUpperCase()}</span></p>
+    </div>
+  `;
+  }
+
+  // ====== EVENT HANDLERS ======
+  function handleShow(ev, ct, mapD) {
+    if (!mapD) return;
+
+    ct.classList.remove("availableLot", "soldLot");
+    if (mapD.status && mapD.status.toLowerCase() === "available") {
+      ct.classList.add("availableLot");
+    } else if (mapD.status && mapD.status.toLowerCase() === "sold") {
+      ct.classList.add("soldLot");
+    } else if (mapD.status && mapD.status.toLowerCase() === "rerserved") {
+      ct.classList.add("reservedLot");
+    }
+
+    tooltipMove.innerHTML = renderTooltipContent(mapD);
+    tooltipMove.style.display = "block";
+    placeSmartInContainer(tooltipMove, ev, 12);
+  }
+
+  function handleHideOnMobile(ct) {
+    if (ct) {
+      setTimeout(() => {
+
+        ct.classList.remove("availableLot", "soldLot");
+      }, 500);
+    }
+    // tooltipMove.style.display = "none";
+    // tooltipMove.innerHTML = "";
+  }
+  function handleHide(ct) {
+    if (ct) {
+      ct.classList.remove("availableLot", "soldLot", "reservedLot");
+    }
+    tooltipMove.style.display = "none";
+    tooltipMove.innerHTML = "";
+  }
+
+  // ====== BIND LISTENERS ======
+  mapId.forEach((id) => {
+    const el = document.querySelector(`#${id}`);
+    if (!el) return;
+
+    const mapD = mapData.find(d => d.id === id);
+    if (!mapD) return;
+
+    if (isMobile()) {
+      // Mobile: show on touchstart/click, hide on touchend/outside
+      el.addEventListener("touchstart", (ev) => {
+        ev.preventDefault();
+        handleShow(ev, el, mapD);
+      }, { passive: false });
+
+      el.addEventListener("touchend", (ev) => {
+        handleHideOnMobile(el);
+      });
+
+      el.addEventListener("click", (ev) => {
+        handleShow(ev, el, mapD);
+      });
+
+    } else {
+      // Desktop: normal hover
+      el.addEventListener("mouseenter", (ev) => handleShow(ev, el, mapD));
+      el.addEventListener("mousemove", (ev) => handleShow(ev, el, mapD));
+      el.addEventListener("mouseleave", () => handleHide(el));
+    }
+  });
+
+  // Hide tooltip when clicking outside lots
+  window.addEventListener("click", (ev) => {
+    if (ev.target && ev.target.tagName.toLowerCase() !== "path") {
+      tooltipMove.style.display = "none";
+    }
+  });
+</script>
