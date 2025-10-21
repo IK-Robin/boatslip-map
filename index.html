@@ -9,6 +9,1306 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+
+
+
+  <script>
+
+    const mapData = [
+      {
+        "id": "_001-002",
+        "slip_number": "001-002",
+        "type": "non hydro",
+        "comments": "hello",
+        "max_length": {
+          "001": "- Slip #001 - 30 feet",
+          "002": "- Slip #002 - 33 feet"
+        }
+      },
+      {
+        "id": "_003-004",
+        "slip_number": "003-004",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "003": "- Slip #003 - 30 feet",
+          "004": "- Slip #004 - 32 feet"
+        }
+      },
+      {
+        "id": "_005-006",
+        "slip_number": "005-006",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "005": "- Slip #005 - 30 feet",
+          "006": "- Slip #006 - 32 feet"
+        }
+      },
+      {
+        "id": "_007-008",
+        "slip_number": "007-008",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "007": "- Slip #007 - 30 feet",
+          "008": "- Slip #008 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_51-52",
+        "slip_number": "51-52",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "51": "- Slip #51 - 30 feet",
+          "52": "- Slip #52 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_53-54",
+        "slip_number": "53-54",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "53": "- Slip #53 - 30 feet",
+          "54": "- Slip #54 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_55-56",
+        "slip_number": "55-56",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "55": "- Slip #55 - 30 feet",
+          "56": "- Slip #56 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_57-58",
+        "slip_number": "57-58",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "57": "- Slip #57 - 30 feet",
+          "58": "- Slip #58 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_59-60",
+        "slip_number": "59-60",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "59": "- Slip #59 - 30 feet",
+          "60": "- Slip #60 - 33 feet"
+        }
+      },
+      {
+        "id": "hydro_61-62",
+        "slip_number": "61-62",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "61": "- Slip #61 - 30 feet",
+          "62": "- Slip #62 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_63-64",
+        "slip_number": "63-64",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "63": "- Slip #63 - 30 feet",
+          "64": "- Slip #64 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_65-66",
+        "slip_number": "65-66",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "65": "- Slip #65 - 30 feet",
+          "66": "- Slip #66 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_67-68",
+        "slip_number": "67-68",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "67": "- Slip #67 - 30 feet",
+          "68": "- Slip #68 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_69-70",
+        "slip_number": "69-70",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "69": "- Slip #69 - 30 feet",
+          "70": "- Slip #70 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_71-72",
+        "slip_number": "71-72",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "71": "- Slip #71 - 30 feet",
+          "72": "- Slip #72 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_73-74",
+        "slip_number": "73-74",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "73": "- Slip #73 - 30 feet",
+          "74": "- Slip #74 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_75-76",
+        "slip_number": "75-76",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "75": "- Slip #75 - 30 feet",
+          "76": "- Slip #76 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_77-78",
+        "slip_number": "77-78",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "77": "- Slip #77 - 30 feet",
+          "78": "- Slip #78 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_79-80",
+        "slip_number": "79-80",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "79": "- Slip #79 - 30 feet",
+          "80": "- Slip #80 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_81-82",
+        "slip_number": "81-82",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "81": "- Slip #81 - 30 feet",
+          "82": "- Slip #82 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_83-84",
+        "slip_number": "83-84",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "83": "- Slip #83 - 30 feet",
+          "84": "- Slip #84 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_85-86",
+        "slip_number": "85-86",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "85": "- Slip #85 - 30 feet",
+          "86": "- Slip #86 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_87-88",
+        "slip_number": "87-88",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "87": "- Slip #87 - 30 feet",
+          "88": "- Slip #88 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_1",
+        "slip_number": "boat house 1",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 1": "- Slip #boat house 1 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_2",
+        "slip_number": "boat house 2",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 2": "- Slip #boat house 2 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_3",
+        "slip_number": "boat house 3",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 3": "- Slip #boat house 3 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_4",
+        "slip_number": "boat house 4",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 4": "- Slip #boat house 4 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_5",
+        "slip_number": "boat house 5",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 5": "- Slip #boat house 5 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_6",
+        "slip_number": "boat house 6",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 6": "- Slip #boat house 6 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_7",
+        "slip_number": "boat house 7",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 7": "- Slip #boat house 7 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_8",
+        "slip_number": "boat house 8",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 8": "- Slip #boat house 8 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_9",
+        "slip_number": "boat house 9",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 9": "- Slip #boat house 9 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_10",
+        "slip_number": "boat house 10",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 10": "- Slip #boat house 10 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_11",
+        "slip_number": "boat house 11",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 11": "- Slip #boat house 11 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_12",
+        "slip_number": "boat house 12",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 12": "- Slip #boat house 12 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_13",
+        "slip_number": "boat house 13",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 13": "- Slip #boat house 13 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_14",
+        "slip_number": "boat house 14",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 14": "- Slip #boat house 14 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_15",
+        "slip_number": "boat house 15",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 15": "- Slip #boat house 15 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_16",
+        "slip_number": "boat house 16",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 16": "- Slip #boat house 16 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_17",
+        "slip_number": "boat house 17",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 17": "- Slip #boat house 17 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_18",
+        "slip_number": "boat house 18",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 18": "- Slip #boat house 18 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_19",
+        "slip_number": "boat house 19",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 19": "- Slip #boat house 19 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_20",
+        "slip_number": "boat house 20",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 20": "- Slip #boat house 20 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_21",
+        "slip_number": "boat house 21",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 21": "- Slip #boat house 21 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_22",
+        "slip_number": "boat house 22",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 22": "- Slip #boat house 22 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_23",
+        "slip_number": "boat house 23",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 23": "- Slip #boat house 23 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_24",
+        "slip_number": "boat house 24",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 24": "- Slip #boat house 24 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_25",
+        "slip_number": "boat house 25",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 25": "- Slip #boat house 25 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_26",
+        "slip_number": "boat house 26",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 26": "- Slip #boat house 26 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_27",
+        "slip_number": "boat house 27",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 27": "- Slip #boat house 27 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_28",
+        "slip_number": "boat house 28",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 28": "- Slip #boat house 28 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_29",
+        "slip_number": "boat house 29",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 29": "- Slip #boat house 29 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_boat_house_30",
+        "slip_number": "boat house 30",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "boat house 30": "- Slip #boat house 30 - 30 feet"
+        }
+      },
+      {
+        "id": "hydro_c_1-2",
+        "slip_number": "C 1-2",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "C 1": "- Slip #C 1 - 30 feet",
+          "C 2": "- Slip #C 2 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_c_3-4",
+        "slip_number": "C 3-4",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "C 3": "- Slip #C 3 - 30 feet",
+          "C 4": "- Slip #C 4 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_c_5-6",
+        "slip_number": "C 5-6",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "C 5": "- Slip #C 5 - 30 feet",
+          "C 6": "- Slip #C 6 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_c_7-8",
+        "slip_number": "C 7-8",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "C 7": "- Slip #C 7 - 30 feet",
+          "C 8": "- Slip #C 8 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_c_9-10",
+        "slip_number": "C 9-10",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "C 9": "- Slip #C 9 - 30 feet",
+          "C 10": "- Slip #C 10 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_c_11-12",
+        "slip_number": "C 11-12",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "C 11": "- Slip #C 11 - 30 feet",
+          "C 12": "- Slip #C 12 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_c_13-14",
+        "slip_number": "C 13-14",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "C 13": "- Slip #C 13 - 30 feet",
+          "C 14": "- Slip #C 14 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_c_15-16",
+        "slip_number": "C 15-16",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "C 15": "- Slip #C 15 - 30 feet",
+          "C 16": "- Slip #C 16 - 32 feet"
+        }
+      },
+      {
+        "id": "hydro_c_16-17",
+        "slip_number": "C 16-17",
+        "type": "hydro & water",
+        "comments": "",
+        "max_length": {
+          "C 16": "- Slip #C 16 - 30 feet",
+          "C 17": "- Slip #C 17 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_1-2",
+        "slip_number": "1-2",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "1": "- Slip #1 - 30 feet",
+          "2": "- Slip #2 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_3-4",
+        "slip_number": "3-4",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "3": "- Slip #3 - 30 feet",
+          "4": "- Slip #4 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_5-6",
+        "slip_number": "5-6",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "5": "- Slip #5 - 30 feet",
+          "6": "- Slip #6 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_7-8",
+        "slip_number": "7-8",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "7": "- Slip #7 - 30 feet",
+          "8": "- Slip #8 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_9-10",
+        "slip_number": "9-10",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "9": "- Slip #9 - 30 feet",
+          "10": "- Slip #10 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_009-010",
+        "slip_number": "009-010",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "009": "- Slip #009 - 30 feet",
+          "010": "- Slip #010 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_11-12",
+        "slip_number": "11-12",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "11": "- Slip #11 - 30 feet",
+          "12": "- Slip #12 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_011-012",
+        "slip_number": "011-012",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "011": "- Slip #011 - 30 feet",
+          "012": "- Slip #012 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_13-14",
+        "slip_number": "13-14",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "13": "- Slip #13 - 30 feet",
+          "14": "- Slip #14 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_013-014",
+        "slip_number": "013-014",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "013": "- Slip #013 - 30 feet",
+          "014": "- Slip #014 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_15-16",
+        "slip_number": "15-16",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "15": "- Slip #15 - 30 feet",
+          "16": "- Slip #16 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_015-016",
+        "slip_number": "015-016",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "015": "- Slip #015 - 30 feet",
+          "016": "- Slip #016 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_17-18",
+        "slip_number": "17-18",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "17": "- Slip #17 - 30 feet",
+          "18": "- Slip #18 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_19-20",
+        "slip_number": "19-20",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "19": "- Slip #19 - 30 feet",
+          "20": "- Slip #20 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_21-22",
+        "slip_number": "21-22",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "21": "- Slip #21 - 30 feet",
+          "22": "- Slip #22 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_23-24",
+        "slip_number": "23-24",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "23": "- Slip #23 - 30 feet",
+          "24": "- Slip #24 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_25-26",
+        "slip_number": "25-26",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "25": "- Slip #25 - 30 feet",
+          "26": "- Slip #26 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_27-28",
+        "slip_number": "27-28",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "27": "- Slip #27 - 30 feet",
+          "28": "- Slip #28 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_29-30",
+        "slip_number": "29-30",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "29": "- Slip #29 - 30 feet",
+          "30": "- Slip #30 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_31-32",
+        "slip_number": "31-32",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "31": "- Slip #31 - 30 feet",
+          "32": "- Slip #32 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_33-34",
+        "slip_number": "33-34",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "33": "- Slip #33 - 30 feet",
+          "34": "- Slip #34 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_35-36",
+        "slip_number": "35-36",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "35": "- Slip #35 - 30 feet",
+          "36": "- Slip #36 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_37-38",
+        "slip_number": "37-38",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "37": "- Slip #37 - 30 feet",
+          "38": "- Slip #38 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_39-40",
+        "slip_number": "39-40",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "39": "- Slip #39 - 30 feet",
+          "40": "- Slip #40 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_41-42",
+        "slip_number": "41-42",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "41": "- Slip #41 - 30 feet",
+          "42": "- Slip #42 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_43-44",
+        "slip_number": "43-44",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "43": "- Slip #43 - 30 feet",
+          "44": "- Slip #44 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_45-46",
+        "slip_number": "45-46",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "45": "- Slip #45 - 30 feet",
+          "46": "- Slip #46 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_47-48",
+        "slip_number": "47-48",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "47": "- Slip #47 - 30 feet",
+          "48": "- Slip #48 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_49-50",
+        "slip_number": "49-50",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "49": "- Slip #49 - 30 feet",
+          "50": "- Slip #50 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_87-88",
+        "slip_number": "87-88",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "87": "- Slip #87 - 30 feet",
+          "88": "- Slip #88 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_a_1-2",
+        "slip_number": "A 1-2",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "A 1": "- Slip #A 1 - 30 feet",
+          "A 2": "- Slip #A 2 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_a_3-4",
+        "slip_number": "A 3-4",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "A 3": "- Slip #A 3 - 30 feet",
+          "A 4": "- Slip #A 4 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_a_5-6",
+        "slip_number": "A 5-6",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "A 5": "- Slip #A 5 - 30 feet",
+          "A 6": "- Slip #A 6 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_a_7-8",
+        "slip_number": "A 7-8",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "A 7": "- Slip #A 7 - 30 feet",
+          "A 8": "- Slip #A 8 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_b_1-2",
+        "slip_number": "B 1-2",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "B 1": "- Slip #B 1 - 30 feet",
+          "B 2": "- Slip #B 2 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_b_3-4",
+        "slip_number": "B 3-4",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "B 3": "- Slip #B 3 - 30 feet",
+          "B 4": "- Slip #B 4 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_b_5-6",
+        "slip_number": "B 5-6",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "B 5": "- Slip #B 5 - 30 feet",
+          "B 6": "- Slip #B 6 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_18-19",
+        "slip_number": "C 18-19",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 18": "- Slip #C 18 - 30 feet",
+          "C 19": "- Slip #C 19 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_20-21",
+        "slip_number": "C 20-21",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 20": "- Slip #C 20 - 30 feet",
+          "C 21": "- Slip #C 21 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_22-23",
+        "slip_number": "C 22-23",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 22": "- Slip #C 22 - 30 feet",
+          "C 23": "- Slip #C 23 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_24-25",
+        "slip_number": "C 24-25",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 24": "- Slip #C 24 - 30 feet",
+          "C 25": "- Slip #C 25 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_26-27",
+        "slip_number": "C 26-27",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 26": "- Slip #C 26 - 30 feet",
+          "C 27": "- Slip #C 27 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_28-29",
+        "slip_number": "C 28-29",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 28": "- Slip #C 28 - 30 feet",
+          "C 29": "- Slip #C 29 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_30-31",
+        "slip_number": "C 30-31",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 30": "- Slip #C 30 - 30 feet",
+          "C 31": "- Slip #C 31 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_32-33",
+        "slip_number": "C 32-33",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 32": "- Slip #C 32 - 30 feet",
+          "C 33": "- Slip #C 33 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_34-35",
+        "slip_number": "C 34-35",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 34": "- Slip #C 34 - 30 feet",
+          "C 35": "- Slip #C 35 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_36-37",
+        "slip_number": "C 36-37",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 36": "- Slip #C 36 - 30 feet",
+          "C 37": "- Slip #C 37 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_38-39",
+        "slip_number": "C 38-39",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 38": "- Slip #C 38 - 30 feet",
+          "C 39": "- Slip #C 39 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_40-41",
+        "slip_number": "C 40-41",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 40": "- Slip #C 40 - 30 feet",
+          "C 41": "- Slip #C 41 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_c_42-43",
+        "slip_number": "C 42-43",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "C 42": "- Slip #C 42 - 30 feet",
+          "C 43": "- Slip #C 43 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_l_1-2",
+        "slip_number": "L 1-2",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "L 1": "- Slip #L 1 - 30 feet",
+          "L 2": "- Slip #L 2 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_l_3-4",
+        "slip_number": "L 3-4",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "L 3": "- Slip #L 3 - 30 feet",
+          "L 4": "- Slip #L 4 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_l_5-6",
+        "slip_number": "L 5-6",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "L 5": "- Slip #L 5 - 30 feet",
+          "L 6": "- Slip #L 6 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_l_7-8",
+        "slip_number": "L 7-8",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "L 7": "- Slip #L 7 - 30 feet",
+          "L 8": "- Slip #L 8 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_l_9-10",
+        "slip_number": "L 9-10",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "L 9": "- Slip #L 9 - 30 feet",
+          "L 10": "- Slip #L 10 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_l_11-12",
+        "slip_number": "L 11-12",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "L 11": "- Slip #L 11 - 30 feet",
+          "L 12": "- Slip #L 12 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_l_13-14",
+        "slip_number": "L 13-14",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "L 13": "- Slip #L 13 - 30 feet",
+          "L 14": "- Slip #L 14 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_l_15-16",
+        "slip_number": "L 15-16",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "L 15": "- Slip #L 15 - 30 feet",
+          "L 16": "- Slip #L 16 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_l_17-18",
+        "slip_number": "L 17-18",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "L 17": "- Slip #L 17 - 30 feet",
+          "L 18": "- Slip #L 18 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_l_19-20",
+        "slip_number": "L 19-20",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "L 19": "- Slip #L 19 - 30 feet",
+          "L 20": "- Slip #L 20 - 32 feet"
+        }
+      },
+      {
+        "id": "non_hydro_ls_1",
+        "slip_number": "ls_1",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "ls_1": "- Slip #ls_1 - 30 feet"
+        }
+      },
+      {
+        "id": "non_hydro_ls_2",
+        "slip_number": "ls_2",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "ls_2": "- Slip #ls_2 - 30 feet"
+        }
+      },
+      {
+        "id": "non_hydro_ls_3",
+        "slip_number": "ls_3",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "ls_3": "- Slip #ls_3 - 30 feet"
+        }
+      },
+      {
+        "id": "non_hydro_ls_4",
+        "slip_number": "ls_4",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "ls_4": "- Slip #ls_4 - 30 feet"
+        }
+      },
+      {
+        "id": "non_hydro_ls_5",
+        "slip_number": "ls_5",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "ls_5": "- Slip #ls_5 - 30 feet"
+        }
+      },
+      {
+        "id": "non_hydro_ls_6",
+        "slip_number": "ls_6",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "ls_6": "- Slip #ls_6 - 30 feet"
+        }
+      },
+      {
+        "id": "non_hydro_ls_7",
+        "slip_number": "ls_7",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "ls_7": "- Slip #ls_7 - 30 feet"
+        }
+      },
+      {
+        "id": "non_hydro_ls_8",
+        "slip_number": "ls_8",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "ls_8": "- Slip #ls_8 - 30 feet"
+        }
+      },
+      {
+        "id": "non_hydro_ls_9",
+        "slip_number": "ls_9",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "ls_9": "- Slip #ls_9 - 30 feet"
+        }
+      },
+      {
+        "id": "non_hydro_ls_10",
+        "slip_number": "ls_10",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "ls_10": "- Slip #ls_10 - 30 feet"
+        }
+      },
+      {
+        "id": "non_hydro_ls_11",
+        "slip_number": "ls_11",
+        "type": "non hydro",
+        "comments": "",
+        "max_length": {
+          "ls_11": "- Slip #ls_11 - 30 feet"
+        }
+      }
+    ];
+
+  </script>
+
+
   <style>
     #mapTitle {
       width: max-content;
@@ -28,7 +1328,7 @@
       margin: 0 auto;
       font-size: 16px;
       font-family: Arial, sans-serif;
-      text-align: center;
+      text-align: left;
 
       line-height: 22px;
       background-color: #113034;
@@ -74,21 +1374,21 @@
     }
 
     .ikr_svg_container {
-      width: 80%;
+      width: 100%;
       height: auto;
 
       margin: 0 auto;
     }
 
-    .availableLot {
-      fill: green !important;
-      opacity: 0.6 !important;
+    .hydroLot {
+      fill: yellow !important;
+      opacity: 1 !important;
 
     }
 
-    .soldLot {
-      fill: red !important;
-      opacity: 0.6 !important;
+    .nonhydroLot {
+      fill: #1CA31C !important;
+      opacity: 1 !important;
 
     }
 
@@ -100,8 +1400,15 @@
     .controls {
       position: absolute;
       top: 17px;
-      left: 11%;
+      left: 4%;
       z-index: 100;
+    }
+
+    .controls button {
+      padding: 6px;
+
+
+      cursor: pointer;
     }
 
     .ikr_map5 {
@@ -113,81 +1420,1069 @@
 <body>
   <div class="ikr_svg_container">
     <div class="ikr_map5">
-      <div class="controls">
+      <div id="controls" class="controls">
         <button id="zoom_in">Zoom In</button>
         <button id="zoom_out">Zoom Out</button>
         <button id="reset">Reset</button>
       </div>
-      <?xml version="1.0" encoding="UTF-8"?><svg id="ikr_svg" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 8192 4902">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg id='ikr_svg' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 8192 4902">
         <defs>
           <style>
-            .cls-1 {
-              opacity: 0;
-            }
-
             .cls-1,
             .cls-2 {
               fill: #fff;
             }
 
+            .cls-1,
             .cls-3 {
-              fill: none;
               stroke: #fff;
               stroke-miterlimit: 10;
-              stroke-width: 11px;
+              stroke-width: 21px;
             }
 
-            .cls-2 {
-              font-family: MyriadPro-Regular, 'Myriad Pro';
-              font-size: 40.65px;
+            .cls-2,
+            .cls-4 {
+              font-family: Roboto-Black, Roboto;
+              font-size: 19px;
+              font-weight: 800;
+            }
+
+            .cls-5 {
+              fill: #5fe05f;
+              opacity: 0;
+            }
+
+            .cls-4 {
+              fill: #161515;
+            }
+
+            .cls-3 {
+              fill: none;
             }
           </style>
         </defs>
         <g id="Layer_1">
-          <image width="8192" height="4902" xlink:href="./Fin Marina Aerial Only.jpg" />
+          <image width="8192" height="4902"
+            xlink:href="https://static.wixstatic.com/media/bc99d3_c80cf814a5f449aebc25c9f33b7f3906~mv2.webp" />
         </g>
-        <g id="Layer_2">
-          <rect id="_1" class="cls-1" x="614.56" y="1299.68" width="67.4" height="214.47"
-            transform="translate(269.98 -95.27) rotate(10.6)" />
-          <rect id="_2" class="cls-1" x="745.29" y="1332.36" width="67.4" height="214.47"
-            transform="translate(278.23 -118.77) rotate(10.6)" />
-          <rect id="_3" class="cls-1" x="872.62" y="1356.2" width="67.4" height="214.47"
-            transform="translate(284.79 -141.79) rotate(10.6)" />
-          <rect id="_4" class="cls-1" x="1011.01" y="1396.96" width="67.4" height="214.47"
-            transform="translate(294.65 -166.57) rotate(10.6)" />
-          <rect id="_5" class="cls-1" x="1146.49" y="1422.32" width="67.4" height="214.47"
-            transform="translate(301.64 -191.06) rotate(10.6)" />
-          <rect id="_6" class="cls-1" x="1281.36" y="1474.42" width="67.4" height="214.47"
-            transform="translate(381.84 -251.41) rotate(12.76)" />
-          <rect id="_7" class="cls-1" x="1423.58" y="1501.26" width="67.4" height="214.47"
-            transform="translate(391.28 -282.16) rotate(12.76)" /><text class="cls-2"
-            transform="translate(686.97 1449.21) rotate(-79.4)">
-            <tspan x="0" y="0">20-19</tspan>
-          </text><text class="cls-2" transform="translate(822.2 1472.66) rotate(-79.4)">
-            <tspan x="0" y="0">18-17</tspan>
-          </text><text class="cls-2" transform="translate(956.09 1504.19) rotate(-79.4)">
-            <tspan x="0" y="0">16-15</tspan>
-          </text><text class="cls-2" transform="translate(1087.96 1529.56) rotate(-79.4)">
-            <tspan x="0" y="0">14-13</tspan>
-          </text><text class="cls-2" transform="translate(1229.32 1560.31) rotate(-79.4)">
-            <tspan x="0" y="0">12-11</tspan>
-          </text><text class="cls-2" transform="translate(1364.86 1577.1) rotate(-79.4)">
-            <tspan x="0" y="0">10-9</tspan>
-          </text><text class="cls-2" transform="translate(1506.66 1599.34) rotate(-79.4)">
-            <tspan x="0" y="0">8-7</tspan>
+        <g id="simple_line">
+          <line id="sm_20-19" class="cls-3" x1="628.43" y1="1491.34" x2="662.47" y2="1337.13" />
+          <line class="cls-3" x1="671.32" y1="1084.7" x2="691.12" y2="949.38" />
+          <line class="cls-3" x1="770.13" y1="1135.77" x2="802.82" y2="968.25" />
+          <line class="cls-3" x1="892.31" y1="1158.06" x2="924.84" y2="993.93" />
+          <line class="cls-3" x1="1010.6" y1="1176.36" x2="1043.13" y2="1012.23" />
+          <line class="cls-3" x1="1147.52" y1="1197.92" x2="1178.03" y2="1043.96" />
+          <line class="cls-3" x1="1276.33" y1="1220.46" x2="1307.62" y2="1056.04" />
+          <line class="cls-3" x1="1409.51" y1="1246.19" x2="1440.89" y2="1080.09" />
+          <line class="cls-3" x1="1537.19" y1="1269.67" x2="1562.63" y2="1100.58" />
+          <line class="cls-3" x1="1667.76" y1="1289.01" x2="1696.9" y2="1122.78" />
+          <line class="cls-3" x1="1789.66" y1="1311.88" x2="1818.79" y2="1145.65" />
+          <line class="cls-3" x1="1924.66" y1="1325.25" x2="1940.64" y2="1157.24" />
+          <line class="cls-3" x1="2066.12" y1="1334.96" x2="2082.1" y2="1166.95" />
+          <line class="cls-3" x1="2209.96" y1="1349.58" x2="2216.3" y2="1180.93" />
+          <line class="cls-3" x1="2360.6" y1="1361.81" x2="2366.95" y2="1193.16" />
+          <line class="cls-3" x1="2522.6" y1="1387.24" x2="2531.32" y2="1187.11" />
+          <line class="cls-3" x1="2681.54" y1="1377.62" x2="2676.85" y2="1177.36" />
+          <line class="cls-3" x1="2845.24" y1="1374.06" x2="2840.56" y2="1173.8" />
+          <line class="cls-3" x1="3002" y1="1366.88" x2="2993.08" y2="1166.76" />
+          <line class="cls-3" x1="3156.02" y1="1359.78" x2="3147.11" y2="1159.66" />
+          <line class="cls-3" x1="3309.71" y1="1380.58" x2="3308.93" y2="1152.79" />
+          <line class="cls-3" x1="3462.23" y1="1342.48" x2="3458.96" y2="1144.14" />
+          <line class="cls-3" x1="2562.28" y1="2399" x2="2572.92" y2="2247.58" />
+          <line class="cls-3" x1="2531.98" y1="2700.44" x2="2543.45" y2="2559.11" />
+          <line class="cls-3" x1="2654.35" y1="2711.46" x2="2674.24" y2="2571.08" />
+          <line class="cls-3" x1="2793.8" y1="2731.58" x2="2806.93" y2="2590.4" />
+          <line class="cls-3" x1="2917.64" y1="2747.45" x2="2934.82" y2="2611.82" />
+          <line class="cls-3" x1="3591.28" y1="2871.87" x2="3576.73" y2="2719.08" />
+          <line class="cls-3" x1="3725.38" y1="2864.51" x2="3719.44" y2="2714.73" />
+          <line class="cls-3" x1="3864.79" y1="2856.87" x2="3858.86" y2="2707.09" />
+          <line class="cls-3" x1="3993.2" y1="2850.46" x2="3986.72" y2="2653.52" />
+          <line class="cls-3" x1="4129.93" y1="2841.87" x2="4111.73" y2="2649.39" />
+          <line class="cls-3" x1="4143.56" y1="2427.31" x2="4129.63" y2="2222.77" />
+          <line class="cls-3" x1="4297.71" y1="2419.88" x2="4297.24" y2="2214.86" />
+          <line class="cls-3" x1="4452.62" y1="2417.5" x2="4450.04" y2="2205.55" />
+          <line class="cls-3" x1="4608.76" y1="2410.15" x2="4594.8" y2="2202.49" />
+          <line class="cls-3" x1="4764.07" y1="2400.12" x2="4759.11" y2="2193.3" />
+          <line class="cls-3" x1="4918.64" y1="2399.93" x2="4913.23" y2="2190.23" />
+          <line class="cls-3" x1="5074.79" y1="2392.04" x2="5069.16" y2="2182.06" />
+          <line class="cls-3" x1="5228.36" y1="2386.61" x2="5225.54" y2="2173.64" />
+          <line class="cls-3" x1="5318.73" y1="2346.29" x2="5318.04" y2="2176.49" />
+          <line class="cls-3" x1="6552.07" y1="1833.64" x2="6567.96" y2="1596.37" />
+          <line class="cls-3" x1="6688.55" y1="1819.1" x2="6705.21" y2="1607.85" />
+          <line class="cls-3" x1="6389.87" y1="1901.11" x2="6392.43" y2="1744.4" />
+          <line class="cls-3" x1="6391.15" y1="1881.13" x2="6269.63" y2="1878.24" />
+          <line class="cls-3" x1="6385.25" y1="2130.94" x2="6285.62" y2="2133.85" />
+          <line class="cls-3" x1="6376.76" y1="2250.9" x2="6277.12" y2="2253.82" />
+          <line class="cls-3" x1="6368.79" y1="2616.92" x2="6261.79" y2="2619.84" />
+          <line class="cls-3" x1="6362.78" y1="2878.79" x2="6269.15" y2="2876.29" />
+          <line class="cls-3" x1="6358.13" y1="3121.16" x2="6263.74" y2="3118.66" />
+          <line class="cls-3" x1="6337.05" y1="3277.38" x2="6263.74" y2="3281.66" />
+          <line class="cls-3" x1="6303.81" y1="3823.46" x2="6221.19" y2="3821.69" />
+          <line class="cls-3" x1="6326.44" y1="3547.48" x2="6243.75" y2="3547.63" />
+          <line class="cls-3" x1="6292.59" y1="4091.34" x2="6211.29" y2="4095.07" />
+          <line class="cls-3" x1="6357.16" y1="4379.35" x2="6291.48" y2="4381.3" />
+          <line class="cls-3" x1="6384.9" y1="2149.9" x2="6387.79" y2="1995.64" />
+          <line class="cls-3" x1="6373.87" y1="2387.35" x2="6376.76" y2="2233.1" />
+          <line class="cls-3" x1="6368.56" y1="2629.41" x2="6371.44" y2="2475.15" />
+          <line class="cls-3" x1="6362.68" y1="2893.64" x2="6363.85" y2="2726.36" />
+          <line class="cls-3" x1="6357.37" y1="3137.67" x2="6360.16" y2="2982.7" />
+          <line class="cls-3" x1="6332.01" y1="3395.5" x2="6337.05" y2="3245.17" />
+          <line class="cls-3" x1="6316.76" y1="3683.49" x2="6326.44" y2="3533.39" />
+          <line class="cls-3" x1="6292.59" y1="4208.1" x2="6292.08" y2="4057.68" />
+          <line class="cls-3" x1="6301.07" y1="3940.76" x2="6304.55" y2="3790.39" />
+          <line class="cls-3" x1="6352.38" y1="4453.64" x2="6359.19" y2="4303.38" />
+          <line class="cls-3" x1="6837.41" y1="1822.96" x2="6841.22" y2="1595.63" />
+          <line class="cls-3" x1="6978.03" y1="1819.93" x2="6982.81" y2="1603.96" />
+          <line class="cls-3" x1="7124.28" y1="1803.58" x2="7117.18" y2="1597.34" />
+          <line class="cls-3" x1="7264.79" y1="1797.93" x2="7265.35" y2="1600.92" />
+          <line class="cls-3" x1="7406.55" y1="1790.76" x2="7404.78" y2="1603.86" />
+          <line class="cls-3" x1="7542.36" y1="1783.14" x2="7546.92" y2="1572.26" />
+          <line class="cls-3" x1="7688.3" y1="1778.55" x2="7684.24" y2="1567.65" />
+          <line class="cls-3" x1="7826.6" y1="1750.06" x2="7830.68" y2="1563.04" />
+          <line class="cls-3" x1="4274" y1="2835.04" x2="4262.68" y2="2642.04" />
+          <line class="cls-3" x1="4422.71" y1="2824.97" x2="4412.58" y2="2638.56" />
+          <line class="cls-3" x1="4567.07" y1="2818.69" x2="4556.14" y2="2627.86" />
+          <line class="cls-3" x1="4723.58" y1="2809.71" x2="4704.64" y2="2619.5" />
+          <line class="cls-3" x1="4865.14" y1="2802.77" x2="4851.24" y2="2612.13" />
+          <line class="cls-3" x1="5005.96" y1="2795.85" x2="5001.39" y2="2604.76" />
+          <line class="cls-3" x1="5130.71" y1="2788.5" x2="5129.31" y2="2593.46" />
+          <line class="cls-3" x1="5268.39" y1="2780.85" x2="5267.31" y2="2627.06" />
+          <line class="cls-3" x1="2760.56" y1="2402.23" x2="2753.16" y2="2249.96" />
+          <line class="cls-3" x1="3026.72" y1="2402.27" x2="3028.15" y2="2249.96" />
+          <line class="cls-3" x1="3617.54" y1="1334.31" x2="3614.27" y2="1135.97" />
+          <line class="cls-3" x1="3762.35" y1="1329.23" x2="3759.09" y2="1130.89" />
+          <line class="cls-3" x1="3895.73" y1="1322.06" x2="3892.46" y2="1123.72" />
+          <line class="cls-3" x1="4027.56" y1="1317.79" x2="4016.12" y2="1121.53" />
+          <line class="cls-3" x1="4190.94" y1="1310.1" x2="4178.36" y2="1107.41" />
+          <line class="cls-3" x1="4357.67" y1="1305.58" x2="4344.75" y2="1100.97" />
+          <line class="cls-3" x1="4516.82" y1="1293.94" x2="4508.95" y2="1090.69" />
+          <line class="cls-3" x1="4681.92" y1="1285.37" x2="4661.71" y2="1082.29" />
+          <line class="cls-3" x1="4846" y1="1276.87" x2="4829.58" y2="1091.49" />
+          <line class="cls-3" x1="5007.36" y1="1273.21" x2="4995.58" y2="1074.3" />
+          <line class="cls-3" x1="5133.19" y1="1251.48" x2="5126.65" y2="1082.27" />
+          <line class="cls-3" x1="5265.92" y1="1242.47" x2="5271.63" y2="1075.35" />
+          <line class="cls-3" x1="5391.6" y1="1274.76" x2="5394.07" y2="1076.38" />
+          <line class="cls-3" x1="5346.17" y1="1799.26" x2="5334.8" y2="1608.35" />
+          <line class="cls-3" x1="762.53" y1="1523.86" x2="796.58" y2="1369.65" />
+          <line class="cls-3" x1="897.99" y1="1554.98" x2="932.03" y2="1400.77" />
+          <line class="cls-3" x1="1028.77" y1="1590.23" x2="1066.19" y2="1432.37" />
+          <line class="cls-3" x1="1168.65" y1="1619.29" x2="1202.69" y2="1465.08" />
+          <line class="cls-3" x1="1301.93" y1="1652.23" x2="1335.97" y2="1498.02" />
+          <line class="cls-3" x1="1440.65" y1="1687.06" x2="1474.7" y2="1532.84" />
+          <line class="cls-3" x1="1582.9" y1="1714.94" x2="1605.13" y2="1558.58" />
+          <line class="cls-3" x1="1701.12" y1="1747.39" x2="1745.22" y2="1595.74" />
+          <line class="cls-3" x1="1856.73" y1="1786.24" x2="1877.75" y2="1629.72" />
+          <line class="cls-3" x1="2024.35" y1="1809.35" x2="2019.88" y2="1617.27" />
+          <line class="cls-3" x1="2173.8" y1="1809.35" x2="2169.33" y2="1617.27" />
+          <line class="cls-3" x1="2325.26" y1="1806.24" x2="2320.79" y2="1614.15" />
+          <line class="cls-3" x1="2453.32" y1="1809.26" x2="2462.68" y2="1617.35" />
+          <line class="cls-3" x1="2614.09" y1="1804.19" x2="2623.45" y2="1601.3" />
+          <line class="cls-3" x1="2779.01" y1="1810.32" x2="2779.01" y2="1594.05" />
+          <line class="cls-3" x1="2945.6" y1="1793.29" x2="2940.1" y2="1598.3" />
+          <line class="cls-3" x1="3093.11" y1="1803.68" x2="3100.12" y2="1595.96" />
+          <polygon class="cls-1"
+            points="3529.14 1625.98 3529.14 1783.35 5237.63 1783.14 5237.63 1622.89 3529.14 1625.98" />
+          <polygon class="cls-1"
+            points="3494.13 2229.04 3494.13 2429.97 3593.48 2429.78 4066.19 2419.88 4056.53 2245.38 3590.13 2260.51 3587.06 2229.04 3494.13 2229.04" />
+        </g>
+        <g id="tex2">
+          <text class="cls-2" transform="translate(3128.75 1619.4)">
+            <tspan x="0" y="0">001</tspan>
           </text>
-          <line class="cls-3" x1="625.36" y1="1504.19" x2="662.79" y2="1343.49" />
-          <line class="cls-3" x1="760.27" y1="1529.56" x2="797.7" y2="1368.86" />
-          <line class="cls-3" x1="898.16" y1="1560.31" x2="935.59" y2="1399.61" />
-          <line class="cls-3" x1="1026" y1="1600.78" x2="1063.43" y2="1440.08" />
-          <line class="cls-3" x1="1169.44" y1="1627.83" x2="1199.44" y2="1465.58" />
-          <line class="cls-3" x1="1300.65" y1="1657.61" x2="1336.62" y2="1496.58" />
-          <line class="cls-3" x1="1441.93" y1="1697.87" x2="1472.64" y2="1535.76" />
+          <text class="cls-2" transform="translate(3040.55 1610.97)">
+            <tspan x="0" y="0">002</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2964.99 1619.4)">
+            <tspan x="0" y="0">003</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2883.77 1620.01)">
+            <tspan x="0" y="0">004</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2802.96 1616.18)">
+            <tspan x="0" y="0">005</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2723.3 1616.18)">
+            <tspan x="0" y="0">006</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2648.9 1620.2)">
+            <tspan x="0" y="0">007</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2558.4 1620.39)">
+            <tspan x="0" y="0">008</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2489.07 1638.31)">
+            <tspan x="0" y="0">009</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2404.51 1638.31)">
+            <tspan x="0" y="0">010</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2344.58 1638.31)">
+            <tspan x="0" y="0">011</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2265.32 1638.31)">
+            <tspan x="0" y="0">012</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2193.29 1641.12)">
+            <tspan x="0" y="0">013</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2109.81 1641.12)">
+            <tspan x="0" y="0">014</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2043.33 1634.51)">
+            <tspan x="0" y="0">015</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1960.52 1638.31)">
+            <tspan x="0" y="0">016</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1898.22 1650.06)">
+            <tspan x="0" y="0">1</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1842.17 1644.95)">
+            <tspan x="0" y="0">2</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1764.15 1619.4)">
+            <tspan x="0" y="0">3</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1709.11 1605.71)">
+            <tspan x="0" y="0">4</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1625.69 1581.93)">
+            <tspan x="0" y="0">5</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1568.1 1575.77)">
+            <tspan x="0" y="0">6</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1494.47 1563.56)">
+            <tspan x="0" y="0">7</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1436.5 1548.76)">
+            <tspan x="0" y="0">8</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1356.26 1530.05)">
+            <tspan x="0" y="0">9</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1285.98 1514.72)">
+            <tspan x="0" y="0">10</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1221.01 1493.36)">
+            <tspan x="0" y="0">11</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1154.63 1478.04)">
+            <tspan x="0" y="0">12</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1084.36 1461.4)">
+            <tspan x="0" y="0">13</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1017.78 1447.7)">
+            <tspan x="0" y="0">14</tspan>
+          </text>
+          <text class="cls-2" transform="translate(885.26 1411.78)">
+            <tspan x="0" y="0">16</tspan>
+          </text>
+          <text class="cls-2" transform="translate(948.38 1429.32)">
+            <tspan x="0" y="0">15</tspan>
+          </text>
+          <text class="cls-2" transform="translate(815.16 1400.77)">
+            <tspan x="0" y="0">17</tspan>
+          </text>
+          <text class="cls-2" transform="translate(751.12 1383.33)">
+            <tspan x="0" y="0">18</tspan>
+          </text>
+          <text class="cls-2" transform="translate(679.33 1372.26)">
+            <tspan x="0" y="0">19</tspan>
+          </text>
+          <text class="cls-2" transform="translate(616.29 1353.3)">
+            <tspan x="0" y="0">20</tspan>
+          </text>
+          <text class="cls-2" transform="translate(628.43 1068.47)">
+            <tspan x="0" y="0">21</tspan>
+          </text>
+          <text class="cls-2" transform="translate(694.69 1084.7)">
+            <tspan x="0" y="0">22</tspan>
+          </text>
+          <text class="cls-2" transform="translate(729.22 1115.06)">
+            <tspan x="0" y="0">23</tspan>
+          </text>
+          <text class="cls-2" transform="translate(795.11 1131.14)">
+            <tspan x="0" y="0">24</tspan>
+          </text>
+          <text class="cls-2" transform="translate(850.8 1143.59)">
+            <tspan x="0" y="0">25</tspan>
+          </text>
+          <text class="cls-2" transform="translate(915.32 1159.97)">
+            <tspan x="0" y="0">26</tspan>
+          </text>
+          <text class="cls-2" transform="translate(967.77 1165.29)">
+            <tspan x="0" y="0">27</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1034.74 1178.02)">
+            <tspan x="0" y="0">28</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1102.14 1181.41)">
+            <tspan x="0" y="0">29</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1172.48 1194.52)">
+            <tspan x="0" y="0">30</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1235.96 1206.1)">
+            <tspan x="0" y="0">31</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1299.56 1218.94)">
+            <tspan x="0" y="0">32</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1366.74 1228.76)">
+            <tspan x="0" y="0">33</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1436.5 1236.08)">
+            <tspan x="0" y="0">34</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1496.24 1246.19)">
+            <tspan x="0" y="0">35</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1562.63 1259.06)">
+            <tspan x="0" y="0">36</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1625.69 1269.67)">
+            <tspan x="0" y="0">37</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1694.03 1290.55)">
+            <tspan x="0" y="0">38</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1745.18 1295.06)">
+            <tspan x="0" y="0">39</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1815.27 1306.92)">
+            <tspan x="0" y="0">40</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1880.75 1311.88)">
+            <tspan x="0" y="0">41</tspan>
+          </text>
+          <text class="cls-2" transform="translate(1949.69 1317.27)">
+            <tspan x="0" y="0">42</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2023.39 1317.48)">
+            <tspan x="0" y="0">43</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2090.8 1317.69)">
+            <tspan x="0" y="0">44</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2165.2 1339.11)">
+            <tspan x="0" y="0">45</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2232.27 1341.04)">
+            <tspan x="0" y="0">46</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2314.63 1352.9)">
+            <tspan x="0" y="0">47</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2383.62 1353.3)">
+            <tspan x="0" y="0">48</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2478.91 1374.06)">
+            <tspan x="0" y="0">49</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2545.39 1377.62)">
+            <tspan x="0" y="0">50</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2634.63 1377.62)">
+            <tspan x="0" y="0">51</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2705.95 1376.1)">
+            <tspan x="0" y="0">52</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2795.03 1372.26)">
+            <tspan x="0" y="0">53</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2867.67 1372.26)">
+            <tspan x="0" y="0">54</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2953.46 1366.88)">
+            <tspan x="0" y="0">55</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3025.11 1362.48)">
+            <tspan x="0" y="0">56</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3111.82 1357.11)">
+            <tspan x="0" y="0">57</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3178.3 1357.11)">
+            <tspan x="0" y="0">58</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3265.01 1380.58)">
+            <tspan x="0" y="0">59</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3333.11 1377.62)">
+            <tspan x="0" y="0">60</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3417.27 1342.48)">
+            <tspan x="0" y="0">61</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3484.07 1339.11)">
+            <tspan x="0" y="0">62</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3564.27 1334.31)">
+            <tspan x="0" y="0">63</tspan>
+          </text>
+          <text class="cls-2" transform="translate(6497.26 1829.46)">
+            <tspan x="0" y="0">1-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(6576.75 1829.46)">
+            <tspan x="0" y="0">2-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(6634.28 1814.74)">
+            <tspan x="0" y="0">3-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(6709.98 1819.1)">
+            <tspan x="0" y="0">4-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(6781.99 1819.93)">
+            <tspan x="0" y="0">5-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(6858.8 1819.1)">
+            <tspan x="0" y="0">6-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(6929.61 1814.95)">
+            <tspan x="0" y="0">7-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(6999.57 1814.32)">
+            <tspan x="0" y="0">8-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7070.08 1797.93)">
+            <tspan x="0" y="0">9-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7143.78 1797.93)">
+            <tspan x="0" y="0">10-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7200.15 1794.49)">
+            <tspan x="0" y="0">11-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7284.78 1790.76)">
+            <tspan x="0" y="0">12-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7342.86 1790.76)">
+            <tspan x="0" y="0">13-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7427.68 1787.65)">
+            <tspan x="0" y="0">14-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7479.32 1780.98)">
+            <tspan x="0" y="0">15-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7564.13 1780.98)">
+            <tspan x="0" y="0">16-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7624.5 1773.19)">
+            <tspan x="0" y="0">17-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7707.55 1770.46)">
+            <tspan x="0" y="0">18-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7761.39 1750.06)">
+            <tspan x="0" y="0">19-L</tspan>
+          </text>
+          <text class="cls-2" transform="translate(7850.89 1747.22)">
+            <tspan x="0" y="0">20-L</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3964.71 2420.31) rotate(-.53)">
+            <tspan x="0" y="0">30</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4086.26 2429.78) scale(.88 1)">
+            <tspan x="0" y="0">1-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4167.54 2419.88) scale(.88 1)">
+            <tspan x="0" y="0">2-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4244.56 2415.85) scale(.88 1)">
+            <tspan x="0" y="0">3-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4319.22 2414.15) scale(.88 1)">
+            <tspan x="0" y="0">4-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4400.38 2412.57) scale(.88 1)">
+            <tspan x="0" y="0">5-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4474.04 2412.52) scale(.88 1)">
+            <tspan x="0" y="0">6-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4550.45 2406.78) scale(.88 1)">
+            <tspan x="0" y="0">7-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4630.71 2404.6) scale(.88 1)">
+            <tspan x="0" y="0">8-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4707.08 2399.21) scale(.88 1)">
+            <tspan x="0" y="0">9-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4785.59 2396.88) scale(.88 1)">
+            <tspan x="0" y="0">10-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4855.9 2396.69) scale(.88 1)">
+            <tspan x="0" y="0">11-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4939.18 2396.45) scale(.88 1)">
+            <tspan x="0" y="0">12-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5011.01 2387.35) scale(.88 1)">
+            <tspan x="0" y="0">13-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5095.47 2387.35) scale(.88 1)">
+            <tspan x="0" y="0">14-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5160.89 2384.19) scale(.88 1)">
+            <tspan x="0" y="0">15 -C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5250.78 2384.19) scale(.88 1)">
+            <tspan x="0" y="0">16-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5255.96 2346.29) scale(.88 1)">
+            <tspan x="0" y="0">16-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5339.97 2346.29) scale(.88 1)">
+            <tspan x="0" y="0">17-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5290.17 2640.71) scale(.88 1)">
+            <tspan x="0" y="0">18-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5204.93 2640.64) scale(.88 1)">
+            <tspan x="0" y="0">19-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5152.03 2609.75) scale(.88 1)">
+            <tspan x="0" y="0">20-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5067.64 2607.45) scale(.88 1)">
+            <tspan x="0" y="0">21-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5023.07 2624.67) scale(.88 1)">
+            <tspan x="0" y="0">22-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4939.18 2623.45) scale(.88 1)">
+            <tspan x="0" y="0">23-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4875.41 2628.14) scale(.88 1)">
+            <tspan x="0" y="0">24-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4789.84 2632.15) scale(.88 1)">
+            <tspan x="0" y="0">25-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4727.89 2633.24) scale(.88 1)">
+            <tspan x="0" y="0">26-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4645.76 2636.86) scale(.88 1)">
+            <tspan x="0" y="0">27-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4578.27 2643.1) scale(.88 1)">
+            <tspan x="0" y="0">28-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4492.15 2639.82) scale(.88 1)">
+            <tspan x="0" y="0">29-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4434.37 2653.71) scale(.88 1)">
+            <tspan x="0" y="0">30-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4351.71 2656.79) scale(.88 1)">
+            <tspan x="0" y="0">31-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4284.35 2653.52) scale(.88 1)">
+            <tspan x="0" y="0">32-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4202.97 2659.74) scale(.88 1)">
+            <tspan x="0" y="0">33-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4135.04 2664.9) scale(.88 1)">
+            <tspan x="0" y="0">34-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4050.85 2670.49) scale(.88 1)">
+            <tspan x="0" y="0">35-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4009.29 2651.01) scale(.88 1)">
+            <tspan x="0" y="0">36-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3926.27 2659.36) scale(.88 1)">
+            <tspan x="0" y="0">37-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3881.56 2707.09) scale(.88 1)">
+            <tspan x="0" y="0">38-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3793.76 2711.31) scale(.88 1)">
+            <tspan x="0" y="0">39-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3740.14 2723.28) scale(.88 1)">
+            <tspan x="0" y="0">40-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3658.2 2725.39) scale(.88 1)">
+            <tspan x="0" y="0">41-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3601.09 2725.01) scale(.88 1)">
+            <tspan x="0" y="0">42-C</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3512.68 2731.77) scale(.88 1)">
+            <tspan x="0" y="0">43-C</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3875.84 2421.14) rotate(-.53)">
+            <tspan x="0" y="0">29</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3820.19 2421.66) rotate(-.53)">
+            <tspan x="0" y="0">28</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3739.9 2422.4) rotate(-.53)">
+            <tspan x="0" y="0">27</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3672.49 2423.03) rotate(-.53)">
+            <tspan x="0" y="0">26</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3593.07 2423.77) rotate(-.53)">
+            <tspan x="0" y="0">25</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3529.21 2424.36) rotate(-.53)">
+            <tspan x="0" y="0">24</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2507.8 2387.35)">
+            <tspan x="0" y="0">1-B</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2485.14 2566.32)">
+            <tspan x="0" y="0">1-A</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2564.19 2577.02)">
+            <tspan x="0" y="0">2-A</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2617.59 2583.62)">
+            <tspan x="0" y="0">3-A</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2693.04 2590.4)">
+            <tspan x="0" y="0">4-A</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2750.49 2604.89)">
+            <tspan x="0" y="0">5-A</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2826.31 2614.06)">
+            <tspan x="0" y="0">6-A</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2880.02 2621.75)">
+            <tspan x="0" y="0">7-A</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2956.26 2628.14)">
+            <tspan x="0" y="0">8-A</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2588.92 2392.77)">
+            <tspan x="0" y="0">2-B</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2703.03 2400.12)">
+            <tspan x="0" y="0">3-B</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2782.54 2399.21)">
+            <tspan x="0" y="0">4-B</tspan>
+          </text>
+          <text class="cls-2" transform="translate(2971.74 2399)">
+            <tspan x="0" y="0">5-B</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3051.25 2400.12)">
+            <tspan x="0" y="0">6-B</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3582.2 1641.12)">
+            <tspan x="0" y="0">23</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3649.61 1641.12)">
+            <tspan x="0" y="0">22</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3722.11 1641.12)">
+            <tspan x="0" y="0">21</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3789.18 1641.12)">
+            <tspan x="0" y="0">20</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3863.23 1641.12)">
+            <tspan x="0" y="0">19</tspan>
+          </text>
+          <text class="cls-4" transform="translate(3927.54 1641.12)">
+            <tspan x="0" y="0">18</tspan>
+          </text>
+          <text class="cls-4" transform="translate(5177.44 1641.12)">
+            <tspan x="0" y="0">1</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5291.83 1625.98)">
+            <tspan x="0" y="0">88</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5356.33 1622.89)">
+            <tspan x="0" y="0">87</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4987.36 1641.12)">
+            <tspan x="0" y="0">3</tspan>
+          </text>
+          <text class="cls-4" transform="translate(5050.27 1641.12)">
+            <tspan x="0" y="0">2</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4848.9 1641.12)">
+            <tspan x="0" y="0">5</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4909.25 1641.12)">
+            <tspan x="0" y="0">4</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4709.29 1641.12)">
+            <tspan x="0" y="0">7</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4769.38 1641.12)">
+            <tspan x="0" y="0">6</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4568.96 1641.12)">
+            <tspan x="0" y="0">9</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4630.22 1641.12)">
+            <tspan x="0" y="0">8</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4422.91 1641.12)">
+            <tspan x="0" y="0">11</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4485.79 1641.12)">
+            <tspan x="0" y="0">10</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4282.26 1641.12)">
+            <tspan x="0" y="0">13</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4346.96 1641.12)">
+            <tspan x="0" y="0">12</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4144.21 1641.12)">
+            <tspan x="0" y="0">15</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4205.53 1641.12)">
+            <tspan x="0" y="0">14</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4004.88 1641.12)">
+            <tspan x="0" y="0">17</tspan>
+          </text>
+          <text class="cls-4" transform="translate(4065.37 1641.12)">
+            <tspan x="0" y="0">16</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3642.37 1332.6)">
+            <tspan x="0" y="0">64</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3713.09 1329.23)">
+            <tspan x="0" y="0">65</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3787.16 1327.34)">
+            <tspan x="0" y="0">66</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3851.91 1324.16)">
+            <tspan x="0" y="0">67</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3918.98 1322.06)">
+            <tspan x="0" y="0">68</tspan>
+          </text>
+          <text class="cls-2" transform="translate(3982.41 1317.79)">
+            <tspan x="0" y="0">69</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4050.85 1313.64)">
+            <tspan x="0" y="0">70</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4140.33 1308.83)">
+            <tspan x="0" y="0">71</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4214.12 1306.92)">
+            <tspan x="0" y="0">72</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4310.71 1306.92)">
+            <tspan x="0" y="0">73</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4381.86 1297.06)">
+            <tspan x="0" y="0">74</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4467.39 1289.01)">
+            <tspan x="0" y="0">75</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4538.63 1285.37)">
+            <tspan x="0" y="0">76</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4630.71 1285.58)">
+            <tspan x="0" y="0">77</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4709.92 1281.91)">
+            <tspan x="0" y="0">78</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4799.22 1276.87)">
+            <tspan x="0" y="0">79</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4872.75 1273.21)">
+            <tspan x="0" y="0">80</tspan>
+          </text>
+          <text class="cls-2" transform="translate(4960.51 1266.96)">
+            <tspan x="0" y="0">81</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5029.8 1264.93)">
+            <tspan x="0" y="0">82</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5086.3 1251.48)">
+            <tspan x="0" y="0">83</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5156.66 1246.19)">
+            <tspan x="0" y="0">84</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5216.44 1236.34)">
+            <tspan x="0" y="0">85</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5290.17 1239.74)">
+            <tspan x="0" y="0">86</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5345.6 1266.77)">
+            <tspan x="0" y="0">87</tspan>
+          </text>
+          <text class="cls-2" transform="translate(5413.53 1269.86)">
+            <tspan x="0" y="0">88</tspan>
+          </text>
+          <text />
+        </g>
+        <g id="slip_with_id">
+          <rect id="hydro_51-52" class="cls-5" x="2663.7" y="1177.33" width="31" height="200.32"
+            transform="translate(-29.15 63.03) rotate(-1.34)" />
+          <rect id="hydro_53-54" class="cls-5" x="2827.4" y="1173.77" width="31" height="200.32"
+            transform="translate(-29.02 66.85) rotate(-1.34)" />
+          <rect id="hydro_55-56" class="cls-5" x="2982.04" y="1166.66" width="31" height="200.32"
+            transform="translate(-53.43 134.73) rotate(-2.55)" />
+          <rect id="hydro_57-58" class="cls-5" x="3136.06" y="1159.57" width="31" height="200.32"
+            transform="translate(-52.97 141.58) rotate(-2.55)" />
+          <rect id="hydro_59-60" class="cls-5" x="3293.82" y="1152.79" width="31" height="227.79"
+            transform="translate(-4.31 11.32) rotate(-.2)" />
+          <rect id="hydro_61-62" class="cls-5" x="3445.09" y="1144.12" width="31" height="198.37"
+            transform="translate(-20.02 57.21) rotate(-.94)" />
+          <rect id="non_hydro_b_1-2" class="cls-5" x="2491.7" y="2307.79" width="151.8" height="31"
+            transform="translate(70.13 4721.81) rotate(-85.98)" />
+          <rect id="non_hydro_a_1-2" class="cls-5" x="2466.82" y="2614.27" width="141.79" height="31"
+            transform="translate(-288.59 4946.61) rotate(-85.36)" />
+          <rect id="non_hydro_a_3-4" class="cls-5" x="2593.4" y="2625.77" width="141.79" height="31"
+            transform="translate(-324.53 4908.8) rotate(-81.94)" />
+          <rect id="non_hydro_a_5-6" class="cls-5" x="2729.47" y="2645.49" width="141.79" height="31"
+            transform="translate(-108.71 5202.68) rotate(-84.68)" />
+          <rect id="non_hydro_a_7-8" class="cls-5" x="2857.88" y="2664.14" width="136.71" height="31"
+            transform="translate(-99.96 5245.85) rotate(-82.78)" />
+          <rect id="hydro_c_1-2" class="cls-5" x="4121.1" y="2222.53" width="31" height="205.02"
+            transform="translate(-148.42 286.45) rotate(-3.9)" />
+          <rect id="hydro_c_3-4" class="cls-5" x="4281.97" y="2214.86" width="31" height="205.02"
+            transform="translate(-5.4 10.04) rotate(-.13)" />
+          <rect id="hydro_c_5-6" class="cls-5" x="4435.83" y="2205.55" width="31" height="211.96"
+            transform="translate(-27.79 54.31) rotate(-.7)" />
+          <rect id="hydro_c_7-8" class="cls-5" x="4586.28" y="2202.25" width="31" height="208.13"
+            transform="translate(-144.32 313.83) rotate(-3.85)" />
+          <rect id="hydro_c_9-10" class="cls-5" x="4746.09" y="2193.27" width="31" height="206.88"
+            transform="translate(-53.66 114.75) rotate(-1.37)" />
+          <rect id="hydro_c_11-12" class="cls-5" x="4900.44" y="2190.2" width="31" height="209.77"
+            transform="translate(-57.54 127.51) rotate(-1.48)" />
+          <rect id="hydro_c_13-14" class="cls-5" x="5056.48" y="2182.03" width="31" height="210.05"
+            transform="translate(-59.52 136.86) rotate(-1.54)" />
+          <rect id="hydro_c_15-16" class="cls-5" x="5211.45" y="2173.63" width="31" height="212.99"
+            transform="translate(-29.7 69.34) rotate(-.76)" />
+          <rect id="hydro_c_16-17" class="cls-5" x="5302.89" y="2176.49" width="31" height="169.8"
+            transform="translate(-9.13 21.58) rotate(-.23)" />
+          <rect id="non_hydro_l_1-2" class="cls-5" x="6441.11" y="1699.51" width="237.8" height="31"
+            transform="translate(4410.33 8145.7) rotate(-86.17)" />
+          <rect id="non_hydro_l_3-4" class="cls-5" x="6590.93" y="1697.97" width="211.9" height="31"
+            transform="translate(4461.94 8254.82) rotate(-85.49)" />
+          <rect id="non_hydro_l_5-6" class="cls-5" x="6725.63" y="1693.8" width="227.36" height="31"
+            transform="translate(5015.42 8518.95) rotate(-89.04)" />
+          <rect id="non_hydro_l_7-8" class="cls-5" x="6872.41" y="1696.45" width="216.01" height="31"
+            transform="translate(5114.53 8652.8) rotate(-88.73)" />
+          <rect id="non_hydro_l_9-10" class="cls-5" x="7105.23" y="1597.28" width="31" height="206.36"
+            transform="translate(-54.27 245.92) rotate(-1.97)" />
+          <rect id="non_hydro_l_11-12" class="cls-5" x="7166.56" y="1683.92" width="197.01" height="31"
+            transform="translate(5544.83 8959.59) rotate(-89.84)" />
+          <rect id="non_hydro_l_13-14" class="cls-5" x="7390.16" y="1603.85" width="31" height="186.91"
+            transform="translate(-15.75 70.27) rotate(-.54)" />
+          <rect id="non_hydro_l_15-16" class="cls-5" x="7439.17" y="1662.2" width="210.93" height="31"
+            transform="translate(5704.28 9184.32) rotate(-88.76)" />
+          <rect id="non_hydro_l_17-18" class="cls-5" x="7670.77" y="1567.63" width="31" height="210.93"
+            transform="translate(-30.76 148.17) rotate(-1.1)" />
+          <rect id="non_hydro_l_19-20" class="cls-5" x="7735.1" y="1641.05" width="187.07" height="31"
+            transform="translate(6001.57 9447.16) rotate(-88.75)" />
+          <polygon id="non_hydro_ls_1" class="cls-5"
+            points="6407.93 1744.66 6405.37 1901.36 6374.37 1900.85 6374.45 1896.23 6269.26 1893.73 6270 1862.74 6374.95 1865.24 6376.93 1744.15 6407.93 1744.66" />
+          <polygon id="non_hydro_ls_3" class="cls-5"
+            points="6392.26 2233.39 6389.37 2387.64 6358.38 2387.06 6360.62 2266.88 6277.58 2269.31 6276.67 2238.32 6361.2 2235.85 6361.26 2232.81 6392.26 2233.39" />
+          <polygon id="non_hydro_ls_5" class="cls-5"
+            points="6379.35 2726.47 6378.17 2893.75 6362.39 2893.64 6362.37 2894.29 6268.74 2891.79 6269.56 2860.8 6347.39 2862.88 6348.35 2726.25 6379.35 2726.47" />
+          <polygon id="non_hydro_ls_6" class="cls-5"
+            points="6375.66 2982.98 6372.87 3137.95 6341.87 3137.39 6341.89 3136.23 6263.33 3134.15 6264.15 3103.16 6342.45 3105.24 6344.67 2982.43 6375.66 2982.98" />
+          <polygon id="non_hydro_ls_7" class="cls-5"
+            points="6352.54 3245.69 6347.5 3396.02 6316.51 3394.98 6319.91 3293.91 6264.64 3297.14 6262.84 3266.19 6320.95 3262.8 6321.56 3244.65 6352.54 3245.69" />
+          <polygon id="non_hydro_ls_9" class="cls-5"
+            points="6320.04 3790.75 6316.57 3941.12 6285.57 3940.4 6287.93 3838.63 6220.86 3837.19 6221.52 3806.2 6288.64 3807.64 6289.05 3790.03 6320.04 3790.75" />
+          <polygon id="non_hydro_ls_8" class="cls-5"
+            points="6342.04 3532.44 6332.22 3684.49 6301.29 3682.49 6309 3563.01 6243.78 3563.12 6243.72 3532.12 6342.04 3532.44" />
+          <polygon id="non_hydro_ls_10" class="cls-5"
+            points="6308.09 4208.04 6277.09 4208.15 6276.75 4107.58 6212 4110.55 6210.58 4079.59 6276.64 4076.56 6276.58 4057.74 6307.58 4057.63 6308.09 4208.04" />
+          <polygon id="non_hydro_ls_11" class="cls-5"
+            points="6374.68 4304.08 6367.87 4454.34 6336.9 4452.94 6339.51 4395.38 6291.94 4396.79 6291.02 4365.8 6340.92 4364.33 6343.71 4302.68 6374.68 4304.08" />
+          <polygon id="non_hydro_ls_2" class="cls-5"
+            points="6403.28 1995.94 6400.4 2150.19 6369.4 2149.61 6369.45 2146.91 6286.07 2149.35 6285.16 2118.36 6370.03 2115.88 6372.29 1995.35 6403.28 1995.94" />
+          <polygon id="non_hydro_ls_4" class="cls-5"
+            points="6384.43 2632.15 6369.21 2632.42 6262.21 2635.33 6261.37 2604.35 6353.57 2601.83 6355.95 2474.86 6386.94 2475.44 6384.43 2632.15" />
+          <rect id="non_hydro_c_42-43" class="cls-5" x="3568.5" y="2718.73" width="31" height="153.48"
+            transform="translate(-248.81 352.26) rotate(-5.44)" />
+          <rect id="non_hydro_c_40-41" class="cls-5" x="3706.91" y="2714.67" width="31" height="149.89"
+            transform="translate(-107.57 149.63) rotate(-2.27)" />
+          <rect id="non_hydro_c_38-39" class="cls-5" x="3846.32" y="2707.03" width="31" height="149.89"
+            transform="translate(-107.16 155.14) rotate(-2.27)" />
+          <rect id="non_hydro_c_36-37" class="cls-5" x="3974.46" y="2653.47" width="31" height="197.05"
+            transform="translate(-88.36 132.73) rotate(-1.88)" />
+          <rect id="non_hydro_c_34-35" class="cls-5" x="4105.33" y="2648.96" width="31" height="193.34"
+            transform="translate(-240.16 400.11) rotate(-5.4)" />
+          <rect id="non_hydro_c_32-33" class="cls-5" x="4252.84" y="2641.87" width="31" height="193.34"
+            transform="translate(-152.96 254.5) rotate(-3.36)" />
+          <rect id="non_hydro_c_30-31" class="cls-5" x="4402.15" y="2638.42" width="31" height="186.69"
+            transform="translate(-141.75 243.78) rotate(-3.11)" />
+          <rect id="non_hydro_c_28-29" class="cls-5" x="4546.11" y="2627.71" width="31" height="191.14"
+            transform="translate(-148.19 265.17) rotate(-3.28)" />
+          <rect id="non_hydro_c_26-27" class="cls-5" x="4698.61" y="2619.03" width="31" height="191.14"
+            transform="translate(-245.74 480.38) rotate(-5.69)" />
+          <rect id="non_hydro_c_24-25" class="cls-5" x="4842.69" y="2611.88" width="31" height="191.14"
+            transform="translate(-184.05 360.52) rotate(-4.17)" />
+          <rect id="non_hydro_c_22-23" class="cls-5" x="4988.18" y="2604.73" width="31" height="191.14"
+            transform="translate(-63.21 120.57) rotate(-1.37)" />
+          <rect id="non_hydro_c_20-21" class="cls-5" x="5114.51" y="2593.46" width="31" height="195.04"
+            transform="translate(-19.26 37.03) rotate(-.41)" />
+          <rect id="non_hydro_c_18-19" class="cls-5" x="5252.35" y="2627.06" width="31" height="153.8"
+            transform="translate(-18.84 37.03) rotate(-.4)" />
+          <rect id="non_hydro_b_3-4" class="cls-5" x="2741.36" y="2249.87" width="31" height="152.45"
+            transform="translate(-109.6 136.48) rotate(-2.78)" />
+          <rect id="non_hydro_b_5-6" class="cls-5" x="2951.28" y="2310.62" width="152.31" height="31"
+            transform="translate(673 5331.58) rotate(-89.46)" />
+          <rect id="hydro_63-64" class="cls-5" x="3600.41" y="1135.95" width="31" height="198.37"
+            transform="translate(-19.87 59.77) rotate(-.94)" />
+          <rect id="hydro_65-66" class="cls-5" x="3745.22" y="1130.87" width="31" height="198.37"
+            transform="translate(-19.76 62.15) rotate(-.94)" />
+          <rect id="hydro_67-68" class="cls-5" x="3878.6" y="1123.71" width="31" height="198.37"
+            transform="translate(-19.63 64.35) rotate(-.94)" />
+          <rect id="hydro_69-70" class="cls-5" x="4006.34" y="1121.36" width="31" height="196.59"
+            transform="translate(-64.16 236.09) rotate(-3.34)" />
+          <rect id="hydro_71-72" class="cls-5" x="4169.15" y="1107.21" width="31" height="203.09"
+            transform="translate(-66.83 261.5) rotate(-3.55)" />
+          <rect id="hydro_73-74" class="cls-5" x="4335.71" y="1100.76" width="31" height="205.02"
+            transform="translate(-67.17 276.55) rotate(-3.61)" />
+          <rect id="hydro_75-76" class="cls-5" x="4497.39" y="1090.62" width="31" height="203.4"
+            transform="translate(-42.74 175.43) rotate(-2.22)" />
+          <rect id="hydro_77-78" class="cls-5" x="4656.31" y="1081.79" width="31" height="204.08"
+            transform="translate(-94.3 468.69) rotate(-5.69)" />
+          <rect id="hydro_79-80" class="cls-5" x="4822.29" y="1091.12" width="31" height="186.1"
+            transform="translate(-85.58 431.25) rotate(-5.06)" />
+          <rect id="hydro_81-82" class="cls-5" x="4985.97" y="1074.13" width="31" height="199.26"
+            transform="translate(-60.64 297.74) rotate(-3.39)" />
+          <rect id="hydro_83-84" class="cls-5" x="5114.42" y="1082.21" width="31" height="169.33"
+            transform="translate(-41.26 199.09) rotate(-2.21)" />
+          <rect id="hydro_85-86" class="cls-5" x="5185.17" y="1143.4" width="167.22" height="31"
+            transform="translate(3930.47 6384.99) rotate(-88.04)" />
+          <rect id="hydro_87-88" class="cls-5" x="5293.64" y="1160.07" width="198.4" height="31"
+            transform="translate(4150.26 6553.36) rotate(-89.29)" />
+          <rect id="non_hydro_87-88" class="cls-5" x="5324.98" y="1608.18" width="31" height="191.25"
+            transform="translate(-91.87 320.59) rotate(-3.41)" />
+          <rect id="non_hydro_49-50" class="cls-5" x="2426.8" y="1271.67" width="200.32" height="31"
+            transform="translate(1130.99 3755.69) rotate(-87.5)" />
+          <rect id="non_hydro_47-48" class="cls-5" x="2279.39" y="1261.99" width="168.77" height="31"
+            transform="translate(998.36 3591.58) rotate(-87.85)" />
+          <rect id="non_hydro_45-46" class="cls-5" x="2128.75" y="1249.75" width="168.77" height="31"
+            transform="translate(865.6 3429.27) rotate(-87.85)" />
+          <rect id="non_hydro_43-44" class="cls-5" x="1989.72" y="1235.45" width="168.77" height="31"
+            transform="translate(632.37 3197.28) rotate(-84.57)" />
+          <rect id="non_hydro_41-42" class="cls-5" x="1848.26" y="1225.75" width="168.77" height="31"
+            transform="translate(513.96 3047.67) rotate(-84.57)" />
+          <rect id="non_hydro_39-40" class="cls-5" x="1719.84" y="1213.27" width="168.77" height="31"
+            transform="translate(282.44 2793.78) rotate(-80.06)" />
+          <rect id="non_hydro_37-38" class="cls-5" x="1597.95" y="1190.39" width="168.77" height="31"
+            transform="translate(204.12 2654.79) rotate(-80.06)" />
+          <rect id="non_hydro_35-36" class="cls-5" x="1464.41" y="1169.63" width="170.99" height="31"
+            transform="translate(147.37 2541.46) rotate(-81.44)" />
+          <rect id="non_hydro_33-34" class="cls-5" x="1340.68" y="1147.64" width="169.04" height="31"
+            transform="translate(17.7 2347.64) rotate(-79.3)" />
+          <rect id="non_hydro_31-32" class="cls-5" x="1208.28" y="1122.75" width="167.38" height="31"
+            transform="translate(-67.76 2194.63) rotate(-79.22)" />
+          <rect id="non_hydro_29-30" class="cls-5" x="1084.3" y="1105.44" width="156.95" height="31"
+            transform="translate(-162.85 2043.58) rotate(-78.79)" />
+          <rect id="non_hydro_27-28" class="cls-5" x="943.21" y="1078.79" width="167.32" height="31"
+            transform="translate(-246.2 1888.8) rotate(-78.79)" />
+          <rect id="non_hydro_25-26" class="cls-5" x="824.91" y="1060.49" width="167.32" height="31"
+            transform="translate(-323.54 1758.02) rotate(-78.79)" />
+          <rect id="non_hydro_23-24" class="cls-5" x="701.14" y="1036.51" width="170.67" height="31"
+            transform="translate(-396.71 1622.39) rotate(-78.96)" />
+          <rect id="non_hydro_21-22" class="cls-5" x="612.84" y="1001.54" width="136.76" height="31"
+            transform="translate(-423.74 1543.84) rotate(-81.68)" />
+          <rect id="non_hydro_19-20" class="cls-5" x="566.48" y="1398.73" width="157.93" height="31"
+            transform="translate(-874.67 1739.64) rotate(-77.55)" />
+          <rect id="non_hydro_17-18" class="cls-5" x="700.59" y="1431.26" width="157.93" height="31"
+            transform="translate(-801.23 1896.11) rotate(-77.55)" />
+          <rect id="non_hydro_15-16" class="cls-5" x="836.05" y="1462.38" width="157.93" height="31"
+            transform="translate(-725.36 2052.8) rotate(-77.55)" />
+          <rect id="non_hydro_13-14" class="cls-5" x="966.36" y="1495.8" width="162.24" height="31"
+            transform="translate(-664.7 2181.89) rotate(-76.66)" />
+          <rect id="non_hydro_11-12" class="cls-5" x="1106.71" y="1526.69" width="157.93" height="31"
+            transform="translate(-575.85 2367.54) rotate(-77.55)" />
+          <rect id="non_hydro_9-10" class="cls-5" x="1239.98" y="1559.62" width="157.93" height="31"
+            transform="translate(-503.46 2523.52) rotate(-77.55)" />
+          <rect id="non_hydro_7-8" class="cls-5" x="1378.71" y="1594.45" width="157.93" height="31"
+            transform="translate(-428.65 2686.3) rotate(-77.55)" />
+          <rect id="non_hydro_5-6" class="cls-5" x="1515.05" y="1621.26" width="157.93" height="31"
+            transform="translate(-250.81 2984.53) rotate(-81.91)" />
+          <rect id="non_hydro_3-4" class="cls-5" x="1644.21" y="1656.06" width="157.93" height="31"
+            transform="translate(-363.15 2859.3) rotate(-73.78)" />
+          <rect id="non_hydro_1-2" class="cls-5" x="1788.28" y="1692.48" width="157.93" height="31"
+            transform="translate(-74.11 3331.22) rotate(-82.35)" />
+          <rect id="non_hydro_015-016" class="cls-5" x="2006.62" y="1617.24" width="31" height="192.14"
+            transform="translate(-39.31 47.5) rotate(-1.33)" />
+          <rect id="non_hydro_013-014" class="cls-5" x="2156.06" y="1617.24" width="31" height="192.14"
+            transform="translate(-39.27 50.98) rotate(-1.33)" />
+          <rect id="non_hydro_011-012" class="cls-5" x="2307.53" y="1614.13" width="31" height="192.14"
+            transform="translate(-39.15 54.5) rotate(-1.33)" />
+          <rect id="non_hydro_009-010" class="cls-5" x="2361.93" y="1697.81" width="192.14" height="31"
+            transform="translate(627.01 4084.95) rotate(-87.21)" />
+          <rect id="_007-008" class="cls-5" x="2517.22" y="1687.25" width="203.1" height="31"
+            transform="translate(797.22 4240.32) rotate(-87.36)" />
+          <rect id="_005-006" class="cls-5" x="2763.51" y="1594.05" width="31" height="216.27" />
+          <rect id="_003-004" class="cls-5" x="2927.35" y="1598.26" width="31" height="195.08"
+            transform="translate(-46.6 83.57) rotate(-1.61)" />
+          <rect id="_001-002" class="cls-5" x="2992.7" y="1684.32" width="207.84" height="31"
+            transform="translate(1293.29 4737.33) rotate(-88.07)" />
+          <polygon class="cls-5"
+            points="3494.13 2229.04 3494.13 2429.97 3593.48 2429.78 4066.19 2419.88 4056.53 2245.38 3590.13 2260.51 3587.06 2229.04 3494.13 2229.04" />
+          <path class="cls-5"
+            d="m3478.63,2445.5v-231.96h122.5l3.02,31,467.02-15.15,11.39,205.64-489.04,10.24-114.89.22Zm31-200.96v169.9l83.68-.16,456.53-9.56-7.94-143.35-465.78,15.11-3.11-31.93h-63.37Z" />
+          <path class="cls-5"
+            d="m3513.64,1798.86v-188.35l1739.49-3.15v191.28l-1739.49.21Zm31-157.4v126.4l1677.49-.21v-129.23l-1677.49,3.04Z" />
+          <polygon id="hydro_boat_house_24" class="cls-5"
+            points="3570 2390.66 3570 2437.63 3508.82 2438.77 3508.6 2391.8 3570 2390.66" />
+          <polygon id="hydro_boat_house_25" class="cls-5"
+            points="3634.85 2390.66 3634.85 2437.63 3573.67 2438.77 3573.45 2391.8 3634.85 2390.66" />
+          <polygon id="hydro_boat_house_26" class="cls-5"
+            points="3711.01 2390.66 3711.01 2437.63 3649.83 2438.77 3649.61 2391.8 3711.01 2390.66" />
+          <polygon id="hydro_boat_house_27" class="cls-5"
+            points="3783.51 2388.51 3783.51 2435.48 3722.33 2436.62 3722.11 2389.65 3783.51 2388.51" />
+          <polygon id="hydro_boat_house_28" class="cls-5"
+            points="3858.57 2388.47 3858.57 2435.44 3797.39 2436.58 3797.17 2389.61 3858.57 2388.47" />
+          <polygon id="hydro_boat_house_29" class="cls-5"
+            points="3919.97 2388.47 3919.97 2435.44 3863.44 2436.58 3863.23 2389.61 3919.97 2388.47" />
+          <polygon id="hydro_boat_house_30" class="cls-5"
+            points="4001.67 2387.35 4001.67 2434.32 3945.14 2435.46 3944.94 2388.49 4001.67 2387.35" />
+          <rect id="hydro_boat_house_23" class="cls-5" x="3562.04" y="1614.39" width="58.22" height="43.12" />
+          <rect id="hydro_boat_house_22" class="cls-5" x="3629.83" y="1614.39" width="58.34" height="43.12" />
+          <rect id="hydro_boat_house_21" class="cls-5" x="3702.34" y="1614.39" width="58.34" height="43.12" />
+          <rect id="hydro_boat_house_20" class="cls-5" x="3773.32" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_19" class="cls-5" x="3849.07" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_18" class="cls-5" x="3915.71" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_17" class="cls-5" x="3986.35" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_16" class="cls-5" x="4049.98" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_15" class="cls-5" x="4127.62" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_14" class="cls-5" x="4189.26" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_13" class="cls-5" x="4262.9" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_12" class="cls-5" x="4328.54" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_11" class="cls-5" x="4406.47" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_10" class="cls-5" x="4469.28" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_9" class="cls-5" x="4547.41" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_8" class="cls-5" x="4610.32" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_7" class="cls-5" x="4688.34" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_6" class="cls-5" x="4751.36" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_5" class="cls-5" x="4828.01" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_4" class="cls-5" x="4888.26" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_3" class="cls-5" x="4964.49" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_2" class="cls-5" x="5025.37" y="1612.95" width="55.79" height="43.12" />
+          <rect id="hydro_boat_house_1" class="cls-5" x="5150.26" y="1612.95" width="55.79" height="43.12" />
         </g>
       </svg>
-
-
       <div id="ikr_toltipMove">
         <div id="mapTitle"></div>
       </div>
@@ -212,9 +2507,7 @@
 
   </div>
 </body>
-<!-- <script src="./mapDataObj.js"></script> -->
-<!-- <script src="./script.js"></script> -->
-<script src="./ikr-zoom.js"></script>
+
 
 </html>
 <script>
@@ -225,101 +2518,146 @@
 
 
 
-  const mapData = [
-    {
-      "id": "_1",
-      "lotNumber": "19-20",
-      "PriceBZD": 950000.0,
-      "PriceUSD": 475000.0,
-      "availability": "Sold",
-      "status": "Sold",
-      "link": "https://google.com",
-      "use": "COMMERCIAL",
-      "source": "COMMERCIAL",
-      "size": "0.42 AC."
-    },
-    {
-      "id": "_2",
-      "lotNumber": "17-18",
-      "PriceBZD": 750000.0,
-      "PriceUSD": 375000.0,
-      "availability": "Sold",
-      "status": "Sold",
-      "link": "https://google.com",
-      "use": "COMMERCIAL",
-      "source": "COMMERCIAL",
-      "size": "0.32 AC"
-    },
-    {
-      "id": "_3",
-      "lotNumber": "15-16",
-      "PriceBZD": 750000.0,
-      "PriceUSD": 375000.0,
-      "availability": "Sold",
-      "status": "Sold",
-      "link": "https://google.com",
-      "use": "COMMERCIAL",
-      "source": "COMMERCIAL",
-      "size": "0.32 AC"
-    },
-    {
-      "id": "_4",
-      "lotNumber": "13-14",
-      "PriceBZD": 750000.0,
-      "PriceUSD": 495000.0,
-      "availability": "Available",
-      "status": "Available",
-      "link": "https://google.com",
-      "use": "COMMERCIAL",
-      "source": "COMMERCIAL",
-      "size": "0.32 AC"
-    },
-    {
-      "id": "_5",
-      "lotNumber": "11-12",
-      "PriceBZD": 750000.0,
-      "PriceUSD": 495000.0,
-      "availability": "Available",
-      "status": "Available",
-      "link": "https://google.com",
-      "use": "COMMERCIAL",
-      "source": "COMMERCIAL",
-      "size": "0.32 AC"
-    },
-    {
-      "id": "_6",
-      "lotNumber": "9-10",
-      "PriceBZD": 750000.0,
-      "PriceUSD": 495000.0,
-      "availability": "Available",
-      "status": "Available",
-      "link": "https://google.com",
-      "use": "COMMERCIAL",
-      "source": "COMMERCIAL",
-      "size": "0.32 AC"
-    },
-
-  ];
-
-
-
-
 
 
 
 
 
   let mapId = [
-    "_1",
-    "_2",
-    "_3",
-    "_4",
-    "_5",
-    "_6",
-
-  ];
-
-
+    "hydro_51-52",
+    "hydro_53-54",
+    "hydro_55-56",
+    "hydro_57-58",
+    "hydro_59-60",
+    "hydro_61-62",
+    "non_hydro_b_1-2",
+    "non_hydro_a_1-2",
+    "non_hydro_a_3-4",
+    "non_hydro_a_5-6",
+    "non_hydro_a_7-8",
+    "hydro_c_1-2",
+    "hydro_c_3-4",
+    "hydro_c_5-6",
+    "hydro_c_7-8",
+    "hydro_c_9-10",
+    "hydro_c_11-12",
+    "hydro_c_13-14",
+    "hydro_c_15-16",
+    "hydro_c_16-17",
+    "non_hydro_l_1-2",
+    "non_hydro_l_3-4",
+    "non_hydro_l_5-6",
+    "non_hydro_l_7-8",
+    "non_hydro_l_9-10",
+    "non_hydro_l_11-12",
+    "non_hydro_l_13-14",
+    "non_hydro_l_15-16",
+    "non_hydro_l_17-18",
+    "non_hydro_l_19-20",
+    "non_hydro_ls_1",
+    "non_hydro_ls_3",
+    "non_hydro_ls_5",
+    "non_hydro_ls_6",
+    "non_hydro_ls_7",
+    "non_hydro_ls_9",
+    "non_hydro_ls_8",
+    "non_hydro_ls_10",
+    "non_hydro_ls_11",
+    "non_hydro_ls_2",
+    "non_hydro_ls_4",
+    "non_hydro_c_42-43",
+    "non_hydro_c_40-41",
+    "non_hydro_c_38-39",
+    "non_hydro_c_36-37",
+    "non_hydro_c_34-35",
+    "non_hydro_c_32-33",
+    "non_hydro_c_30-31",
+    "non_hydro_c_28-29",
+    "non_hydro_c_26-27",
+    "non_hydro_c_24-25",
+    "non_hydro_c_22-23",
+    "non_hydro_c_20-21",
+    "non_hydro_c_18-19",
+    "non_hydro_b_3-4",
+    "non_hydro_b_5-6",
+    "hydro_63-64",
+    "hydro_65-66",
+    "hydro_67-68",
+    "hydro_69-70",
+    "hydro_71-72",
+    "hydro_73-74",
+    "hydro_75-76",
+    "hydro_77-78",
+    "hydro_79-80",
+    "hydro_81-82",
+    "hydro_83-84",
+    "hydro_85-86",
+    "hydro_87-88",
+    "non_hydro_87-88",
+    "non_hydro_49-50",
+    "non_hydro_47-48",
+    "non_hydro_45-46",
+    "non_hydro_43-44",
+    "non_hydro_41-42",
+    "non_hydro_39-40",
+    "non_hydro_37-38",
+    "non_hydro_35-36",
+    "non_hydro_33-34",
+    "non_hydro_31-32",
+    "non_hydro_29-30",
+    "non_hydro_27-28",
+    "non_hydro_25-26",
+    "non_hydro_23-24",
+    "non_hydro_21-22",
+    "non_hydro_19-20",
+    "non_hydro_17-18",
+    "non_hydro_15-16",
+    "non_hydro_13-14",
+    "non_hydro_11-12",
+    "non_hydro_9-10",
+    "non_hydro_7-8",
+    "non_hydro_5-6",
+    "non_hydro_3-4",
+    "non_hydro_1-2",
+    "non_hydro_015-016",
+    "non_hydro_013-014",
+    "non_hydro_011-012",
+    "non_hydro_009-010",
+    "_007-008",
+    "_005-006",
+    "_003-004",
+    "_001-002",
+    "hydro_boat_house_24",
+    "hydro_boat_house_25",
+    "hydro_boat_house_26",
+    "hydro_boat_house_27",
+    "hydro_boat_house_28",
+    "hydro_boat_house_29",
+    "hydro_boat_house_30",
+    "hydro_boat_house_23",
+    "hydro_boat_house_22",
+    "hydro_boat_house_21",
+    "hydro_boat_house_20",
+    "hydro_boat_house_19",
+    "hydro_boat_house_18",
+    "hydro_boat_house_17",
+    "hydro_boat_house_16",
+    "hydro_boat_house_15",
+    "hydro_boat_house_14",
+    "hydro_boat_house_13",
+    "hydro_boat_house_12",
+    "hydro_boat_house_11",
+    "hydro_boat_house_10",
+    "hydro_boat_house_9",
+    "hydro_boat_house_8",
+    "hydro_boat_house_7",
+    "hydro_boat_house_6",
+    "hydro_boat_house_5",
+    "hydro_boat_house_4",
+    "hydro_boat_house_3",
+    "hydro_boat_house_2",
+    "hydro_boat_house_1"
+  ]
   const ikr_btnTxt = document.getElementById('ikr_btnTxt');
   // get the map id
   const ikr_svg = document.getElementById(
@@ -327,7 +2665,8 @@
   )
 
   ikrZoom(ikr_svg);
-  const Shape = ikr_svg.getElementById('Shape')
+  const Shape = ikr_svg.getElementById('slip_with_id')
+
 
 
   function getAllChildNodeIds(svgElement) {
@@ -346,7 +2685,7 @@
 
     return childNodeIds;
   }
-  // console.log(getAllChildNodeIds(Shape));
+  console.log(getAllChildNodeIds(Shape));
 
 
   // map data
@@ -431,7 +2770,6 @@
 
   // ====== TOOLTIP RENDER ======
   function renderTooltipContent(mapD) {
-
     // Clean number and add commas
     function cleanNumber(str) {
       if (str == null) return 0; // handles null & undefined
@@ -439,41 +2777,54 @@
       return num.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     }
 
-
+    // Determine status style
     let statusStyle = "font-weight: bold;";
     if (mapD.status && mapD.status.toLowerCase() === "available") {
       statusStyle = "color: #d3b683; font-weight: bold;";
     } else if (mapD.status && mapD.status.toLowerCase() === "sold") {
       statusStyle = "color: red; font-weight: bold;";
-    } else if (mapD.status && mapD.status.toLowerCase() === "Rerserved") {
+    } else if (mapD.status && mapD.status.toLowerCase() === "reserved") {
       statusStyle = "color: #FFD700; font-weight: bold;";
     }
 
-    // <p><strong>Lot Number:</strong> ${String(mapD.id || "").replace(/_/g, "")}</p>
+    // Dynamically build max_length content with explicit line breaks
+    let maxLengthContent = "";
+    if (mapD.max_length && typeof mapD.max_length === 'object') {
+      maxLengthContent = Object.entries(mapD.max_length)
+        .map(([slip, length]) => `<span style="display: block;padding-left:6%;">${length.toUpperCase()}</span>`)
+        .join("");
+    }
+
+    // Return HTML template with adjusted styling
     return `
-    <div style="font-family: Arial, sans-serif; line-height: 1.4;">
-      <p ><strong style="text-transform: capitalize;">Boat Slip:</strong> <span style="text-transform:uppercase;" > ${mapD.use ?? ""}</span></p>
-      <p><strong>Slip Number:</strong> ${mapD.lotNumber}</p>
- 
-      <p><strong>Price USD:</strong> <span style="font-weight:bold;">$${cleanNumber(mapD.PriceUSD)}</span></p>
-      <p><strong>Status:</strong> <span style="${statusStyle}">${(mapD.status ?? "").toString().toUpperCase()}</span></p>
+    <div >
+      <p style="margin: 0 0 4px 0;"><strong style="text-transform: uppercase;">Slip Numbers:</strong> <span style="text-transform: uppercase;">${mapD.slip_number ? mapD.slip_number.replace('-', ' & ') : ''}</span></p>
+      <p style="margin: 0 0 4px 0;"><strong style="text-transform: uppercase;">Max Boat Length:</strong> ${maxLengthContent || '<span style="text-transform: uppercase;">N/A</span>'}</p>
+      <p style="margin: 0;"><strong style="text-transform: uppercase;">Type:</strong> <span style="">${(mapD.type ?? "").toUpperCase()}</span></p>
+      <p style="margin: 0;"><strong style="text-transform: uppercase;">Comments:</strong> <span style="">${(mapD.comments ?? "").toUpperCase()}</span></p>
     </div>
   `;
   }
+
+  // Example usage:
+
 
   // ====== EVENT HANDLERS ======
   function handleShow(ev, ct, mapD) {
     if (!mapD) return;
 
-    ct.classList.remove("availableLot", "soldLot");
-    if (mapD.status && mapD.status.toLowerCase() === "available") {
-      ct.classList.add("availableLot");
-    } else if (mapD.status && mapD.status.toLowerCase() === "sold") {
-      ct.classList.add("soldLot");
-    } else if (mapD.status && mapD.status.toLowerCase() === "rerserved") {
-      ct.classList.add("reservedLot");
-    }
+    ct.classList.remove("nonhydroLot", "hydroLot");
 
+    // do not add the class if the the id have the value 'hydro_boat_house'
+
+
+
+
+    if (mapD.type && mapD.type.toLowerCase() === "hydro & water" && !mapD.id.includes("hydro_boat_house")) {
+      ct.classList.add("hydroLot");
+    } else if (mapD.type && mapD.type.toLowerCase() === "non hydro" && !mapD.id.includes("hydro_boat_house")) {
+      ct.classList.add("nonhydroLot");
+    }
     tooltipMove.innerHTML = renderTooltipContent(mapD);
     tooltipMove.style.display = "block";
     placeSmartInContainer(tooltipMove, ev, 12);
@@ -483,7 +2834,7 @@
     if (ct) {
       setTimeout(() => {
 
-        ct.classList.remove("availableLot", "soldLot");
+        ct.classList.remove("nonhydroLot", "hydroLot");
       }, 500);
     }
     // tooltipMove.style.display = "none";
@@ -491,7 +2842,7 @@
   }
   function handleHide(ct) {
     if (ct) {
-      ct.classList.remove("availableLot", "soldLot", "reservedLot");
+      ct.classList.remove("nonhydroLot", "hydroLot");
     }
     tooltipMove.style.display = "none";
     tooltipMove.innerHTML = "";
@@ -507,6 +2858,8 @@
 
     if (isMobile()) {
       // Mobile: show on touchstart/click, hide on touchend/outside
+      const controls = document.getElementById("controls");
+      controls.style.display = "none"; // Hide controls on mobile
       el.addEventListener("touchstart", (ev) => {
         ev.preventDefault();
         handleShow(ev, el, mapD);
@@ -534,4 +2887,294 @@
       tooltipMove.style.display = "none";
     }
   });
+
+
+
+  function ikrZoom(ikrsvg) {
+    let mouseX;
+    let mouseY;
+    let mouseTX;
+    let mouseTY;
+    let addTransformLavelX = 35;
+    let addTransformLavelY = 10;
+    let isZoom = true;
+    let startX = 0;
+    let startY = 0;
+    let panning = false;
+
+    const ts = {
+      scale: 1,
+      rotate: 0,
+      translate: {
+        x: 0,
+        y: 0,
+      },
+    };
+    var currentScale = 1;
+    var step = 0.2;
+
+    const zoomIN = document.getElementById("zoom_in");
+    const zoomOut = document.getElementById("zoom_out");
+    const resets = document.getElementById("reset");
+
+    ikrsvg.style.scrollbarWidth = "none";
+
+    zoomIN.addEventListener("click", (e) => {
+      isZoom = true;
+      currentScale < 8 ? (currentScale += step) : currentScale;
+
+      applyZoom();
+    });
+
+    zoomOut.addEventListener("click", (e) => {
+      isZoom = false;
+      // currentScale > 1?currentScale -= step: currentScale;
+      if (currentScale > 1) {
+        currentScale -= step;
+      } else {
+        currentScale;
+        var transformzoomOut = `translate(${0}px, ${0}px) ${currentScale > 1 ? `scale(${currentScale})` : `scale(1)`
+          }`;
+        ikrsvg.style.transform = transformzoomOut;
+      }
+
+      applyZoom();
+    });
+
+
+
+
+    function applyZoom(e) {
+      var currentStyle = ikrsvg.getAttribute("style");
+      var currentTranslate = parseTranslate(currentStyle);
+      if (currentScale > 1 || currentTranslate.x > 0 || currentTranslate > 0) {
+        resets.addEventListener("click", reset);
+      }
+
+
+      var transform = `translate(${currentTranslate.x}px, ${currentTranslate.y
+        }px) ${currentScale > 1 ? `scale(${currentScale})` : `scale(1)`}`;
+      var transformzoomOut = `translate(${0}px, ${0}px) ${currentScale > 1 ? `scale(${currentScale})` : `scale(1)`
+        }`;
+      ikrsvg.style.transform = transform;
+      // Update the ts object with the currentScale value
+      ts.scale = currentScale;
+    }
+
+    function parseTranslate(style) {
+      var translateRegex = /translate\(([^,]+),([^)]+)\)/;
+      var match = style.match(translateRegex);
+
+      if (match) {
+        return {
+          x: parseFloat(match[1]),
+          y: parseFloat(match[2]),
+        };
+      } else {
+        return { x: 0, y: 0 };
+      }
+    }
+
+    // rotate.oninput = function(event) {
+    //   event.preventDefault();
+    //   ts.rotate = event.target.value;
+    //   setTransform();
+    // };
+
+    // ikrsvg.onwheel = function(event) {
+    //   event.preventDefault();
+    //   //need more handling  to avoid fast scrolls
+    //   console.log(event)
+    //   var func = ikrsvg.onwheel;
+    //   ikrsvg.onwheel = null;
+    //   console.log('hh');
+
+    //   let rec = ikrsvg.getBoundingClientRect();
+    //   let x = (event.clientX - rec.x) / ts.scale;
+    //   let y = (event.clientY - rec.y) / ts.scale;
+
+    //   let delta = (event.wheelDelta ? event.wheelDelta : -event.deltaY);
+    //   ts.scale = (delta > 0) ? (ts.scale + 0.2) : (ts.scale - 0.2);
+
+    //   //let m = (ts.scale - 1) / 2;
+    //   let m = (delta > 0) ? 0.1 : -0.1;
+    //   ts.translate.x += (-x * m * 2) + (ikrsvg.offsetWidth * m);
+    //   ts.translate.y += (-y * m * 2) + (ikrsvg.offsetHeight * m);
+
+    //   setTransform();
+    //   ikrsvg.onwheel = func;
+    // };
+
+    function getTheMouseDownCordenet(event) {
+      event.preventDefault();
+      panning = true;
+
+      ikrsvg.style.cursor = "grabbing";
+      mouseX = event.clientX;
+      mouseY = event.clientY;
+      mouseTX = ts.translate.x;
+      mouseTY = ts.translate.y;
+    }
+
+    function isMobile() {
+      const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+      return regex.test(navigator.userAgent);
+    }
+
+    if (isMobile()) {
+
+
+
+      let touchIdentifier;
+      let touchStartX;
+      let touchStartY;
+      let touchStartTX;
+      let touchStartTY;
+      let panning = false;
+      let currentScale = 1;
+      const step = 0.2;
+
+      const ts = {
+        scale: 1,
+        rotate: 0,
+        translate: {
+          x: 0,
+          y: 0
+        }
+      };
+
+      function applyZoom() {
+        const transform = `translate(${ts.translate.x}px, ${ts.translate.y}px) scale(${currentScale})`;
+        ikrsvg.style.transform = transform;
+      }
+
+      ikrsvg.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          touchIdentifier = e.touches[0].identifier;
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          touchStartTX = ts.translate.x;
+          touchStartTY = ts.translate.y;
+        } else {
+          panning = true;
+          const touch1 = e.touches[0];
+          const touch2 = e.touches[1];
+          touchStartX = (touch1.clientX + touch2.clientX) / 2;
+          touchStartY = (touch1.clientY + touch2.clientY) / 2;
+        }
+      });
+
+      ikrsvg.addEventListener('touchmove', (e) => {
+        // e.preventDefault();
+        if (panning) {
+          const touch1 = e.touches[0];
+          const touch2 = e.touches[1];
+          const touchCurrentX = (touch1.clientX + touch2.clientX) / 2;
+          const touchCurrentY = (touch1.clientY + touch2.clientY) / 2;
+
+          ts.translate.x = touchStartTX + (touchCurrentX - touchStartX);
+          ts.translate.y = touchStartTY + (touchCurrentY - touchStartY);
+
+          applyZoom();
+        } else if (e.touches.length === 1 && e.touches[0].identifier === touchIdentifier) {
+          const touchCurrentX = e.touches[0].clientX;
+          const touchCurrentY = e.touches[0].clientY;
+
+          ts.translate.x = touchStartTX + (touchCurrentX - touchStartX);
+          ts.translate.y = touchStartTY + (touchCurrentY - touchStartY);
+
+          applyZoom();
+        }
+      });
+
+      ikrsvg.addEventListener('touchend', () => {
+        panning = false;
+        touchIdentifier = null;
+      });
+
+      const zoomIn = document.getElementById('zoom_in');
+      const zoomOut = document.getElementById('zoom_out');
+      const resets = document.getElementById('reset');
+
+      zoomIn.addEventListener('click', () => {
+        currentScale < 8 ? (currentScale += step) : currentScale;
+        applyZoom();
+      });
+
+      zoomOut.addEventListener('click', () => {
+        if (currentScale > 1) {
+          currentScale -= step;
+        } else {
+          currentScale = 1;
+        }
+        applyZoom();
+      });
+
+      resets.addEventListener('click', () => {
+        currentScale = 1;
+        ts.translate = { x: 0, y: 0 };
+        applyZoom();
+      });
+
+      applyZoom();
+
+    } else {
+      console.log("Desktop device detected");
+    }
+
+
+
+
+    ikrsvg.addEventListener("mousedown", getTheMouseDownCordenet);
+
+    ikrsvg.onmouseup = function (event) {
+      panning = false;
+      ikrsvg.style.cursor = "grab";
+    };
+    ikrsvg.onmouseout = function (event) {
+      panning = false;
+      ikrsvg.style.cursor = "auto";
+    };
+
+    ikrsvg.onmousemove = function (event) {
+      event.preventDefault();
+      let rec = ikrsvg.getBoundingClientRect();
+      let xx = event.clientX - rec.x;
+      let xy = event.clientY - rec.y;
+
+      const x = event.clientX;
+      const y = event.clientY;
+      pointX = x - startX;
+      pointY = y - startY;
+      if (!panning) {
+        return;
+      }
+      ts.translate.x = mouseTX + (x - mouseX);
+      ts.translate.y = mouseTY + (y - mouseY);
+      setTransform();
+    };
+
+    function setTransform() {
+      const steps = `translate(${ts.translate.x}px,${ts.translate.y}px) scale(${ts.scale}) rotate(${ts.rotate}deg) translate3d(0,0,0)`;
+      //console.log(steps);
+      ikrsvg.style.transform = steps;
+    }
+
+    function reset() {
+      ts.scale = 1;
+      currentScale = 1;
+      ts.translate = {
+        x: 0,
+        y: 0,
+      };
+
+      ikrsvg.style.transform = "none";
+    }
+
+    setTransform();
+  }
+
+  // Define a breakpoint value (you can adjust this based on your needs)
+
+
 </script>
