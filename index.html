@@ -1332,7 +1332,7 @@
 
       line-height: 22px;
       background-color: #113034;
-      z-index: 55;
+      z-index: 110;
       pointer-events: none;
       box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
       border-radius: 6px;
@@ -1344,6 +1344,24 @@
       margin: 4px 0;
       font-size: 16px;
       color: #d3b683;
+    }
+
+    .controls {
+      position: absolute;
+      top: 17px;
+      right: 2%;
+      z-index: 100;
+      display: flex;
+	/* flex-direction: column; */
+	gap: 5px;
+	flex-direction: column-reverse;
+    }
+
+    .controls button {
+      padding: 6px;
+
+
+      cursor: pointer;
     }
 
     /* Responsive adjustments */
@@ -1358,6 +1376,22 @@
         font-size: 13px;
         line-height: 20px;
       }
+
+      .controls button {
+        padding: 4px 4px;
+        cursor: pointer;
+      }
+
+ .controls {
+	bottom: 11px;
+	left: auto;
+	top: auto;
+	right: 3%;
+	display: flex;
+	/* flex-direction: column; */
+	gap: 5px;
+	flex-direction: column-reverse;
+}
     }
 
     @media (max-width: 480px) {
@@ -1370,6 +1404,21 @@
       #ikr_toltipMove p {
         font-size: 12px;
         line-height: 18px;
+      }
+.controls {
+	bottom: 11px;
+	left: auto;
+	top: auto;
+	right: 3%;
+	display: flex;
+	/* flex-direction: column; */
+	gap: 5px;
+	flex-direction: column-reverse;
+}
+      
+      .controls button {
+        padding: 4px 4px;
+        cursor: pointer;
       }
     }
 
@@ -1397,35 +1446,38 @@
 
     }
 
-    .controls {
-      position: absolute;
-      top: 17px;
-      left: 4%;
-      z-index: 100;
-    }
-
-    .controls button {
-      padding: 6px;
-
-
-      cursor: pointer;
-    }
 
     .ikr_map5 {
       overflow: hidden;
+      position: relative;
     }
   </style>
 </head>
 
 <body>
   <div class="ikr_svg_container">
+
     <div class="ikr_map5">
       <div id="controls" class="controls">
-        <button id="zoom_in">Zoom In</button>
-        <button id="zoom_out">Zoom Out</button>
-        <button id="reset">Reset</button>
+        <button id="zoom_in"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true" focusable="false">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg></button>
+        <button id="zoom_out"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true" focusable="false">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg></button>
+        <button id="reset"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true" focusable="false">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+            </path>
+          </svg></button>
       </div>
-      <?xml version="1.0" encoding="UTF-8"?>
+
       <svg id='ikr_svg' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 8192 4902">
         <defs>
@@ -2664,10 +2716,10 @@
     'ikr_svg'
   )
 
- 
+
   const Shape = ikr_svg.getElementById('slip_with_id')
 
- ikrZoom(ikr_svg);
+  ikrZoom(ikr_svg);
 
   function getAllChildNodeIds(svgElement) {
     const childNodeIds = [];
@@ -2830,7 +2882,7 @@
     placeSmartInContainer(tooltipMove, ev, 12);
   }
 
-    
+
   function handleHideOnMobile(ct) {
     if (ct) {
       setTimeout(() => {
@@ -2858,42 +2910,42 @@
     if (!mapD) return;
 
     if (isMobile()) {
-  // Mobile: show on touchstart/click, hide on touchend/outside
-  const controls = document.getElementById("controls");
-  // controls.style.display = "none"; // Hide controls on mobile
+      // Mobile: show on touchstart/click, hide on touchend/outside
+      const controls = document.getElementById("controls");
+      // controls.style.display = "none"; // Hide controls on mobile
 
 
 
-  
-  // Debounce function to prevent rapid successive calls
-  function debounce(func, wait) {
-    let timeout;
-    return function (...args) {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(this, args), wait);
-    };
-  }
 
-  // Debounced handleShow to prevent double-tap issues
-  const debouncedHandleShow = debounce((ev, el, mapD) => {
-    handleShow(ev, el, mapD);
-  }, 300); // 300ms debounce time, adjust as needed
+      // Debounce function to prevent rapid successive calls
+      function debounce(func, wait) {
+        let timeout;
+        return function (...args) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+      }
 
-  el.addEventListener("touchstart", (ev) => {
-    ev.preventDefault(); // Prevent default touch behavior
-    debouncedHandleShow(ev, el, mapD);
-  }, { passive: false });
+      // Debounced handleShow to prevent double-tap issues
+      const debouncedHandleShow = debounce((ev, el, mapD) => {
+        handleShow(ev, el, mapD);
+      }, 300); // 300ms debounce time, adjust as needed
 
-  el.addEventListener("touchend", (ev) => {
-    handleHideOnMobile(el);
-  });
+      el.addEventListener("touchstart", (ev) => {
+        ev.preventDefault(); // Prevent default touch behavior
+        debouncedHandleShow(ev, el, mapD);
+      }, { passive: false });
 
-  el.addEventListener("click", (ev) => {
-    debouncedHandleShow(ev, el, mapD);
-  });
-}else {
+      el.addEventListener("touchend", (ev) => {
+        handleHideOnMobile(el);
+      });
+
+      el.addEventListener("click", (ev) => {
+        debouncedHandleShow(ev, el, mapD);
+      });
+    } else {
       // Desktop: normal hover
-    
+
       el.addEventListener("mouseenter", (ev) => handleShow(ev, el, mapD));
       el.addEventListener("mousemove", (ev) => handleShow(ev, el, mapD));
       el.addEventListener("mouseleave", () => handleHide(el));
