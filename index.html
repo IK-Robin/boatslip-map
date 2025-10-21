@@ -2857,23 +2857,37 @@
     if (!mapD) return;
 
     if (isMobile()) {
-      // Mobile: show on touchstart/click, hide on touchend/outside
-      const controls = document.getElementById("controls");
-      controls.style.display = "none"; // Hide controls on mobile
-      el.addEventListener("touchstart", (ev) => {
-        ev.preventDefault();
-        handleShow(ev, el, mapD);
-      }, { passive: false });
+  // Mobile: show on touchstart/click, hide on touchend/outside
+  const controls = document.getElementById("controls");
+  controls.style.display = "none"; // Hide controls on mobile
 
-      el.addEventListener("touchend", (ev) => {
-        handleHideOnMobile(el);
-      });
+  // Debounce function to prevent rapid successive calls
+  function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+  }
 
-      el.addEventListener("click", (ev) => {
-        handleShow(ev, el, mapD);
-      });
+  // Debounced handleShow to prevent double-tap issues
+  const debouncedHandleShow = debounce((ev, el, mapD) => {
+    handleShow(ev, el, mapD);
+  }, 300); // 300ms debounce time, adjust as needed
 
-    } else {
+  el.addEventListener("touchstart", (ev) => {
+    ev.preventDefault(); // Prevent default touch behavior
+    debouncedHandleShow(ev, el, mapD);
+  }, { passive: false });
+
+  el.addEventListener("touchend", (ev) => {
+    handleHideOnMobile(el);
+  });
+
+  el.addEventListener("click", (ev) => {
+    debouncedHandleShow(ev, el, mapD);
+  });
+}else {
       // Desktop: normal hover
        ikrZoom(ikr_svg);
       el.addEventListener("mouseenter", (ev) => handleShow(ev, el, mapD));
