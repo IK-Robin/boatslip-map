@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=yes">
+
   <title>interactive map </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -3190,6 +3191,41 @@
   }
 
   // Define a breakpoint value (you can adjust this based on your needs)
+
+  if (window.visualViewport && /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+  const tooltip = document.getElementById("ikr_toltipMove");
+
+  // Track viewport scale and position
+  let lastScale = 1;
+  let lastOffsetX = 0;
+  let lastOffsetY = 0;
+
+  function updateTooltipPosition() {
+    if (!tooltip || tooltip.style.display === "none") return;
+
+    // Adjust tooltip to match the new zoom level
+    const scale = window.visualViewport.scale;
+    const offsetX = window.visualViewport.offsetLeft;
+    const offsetY = window.visualViewport.offsetTop;
+
+    // Apply transform to keep tooltip aligned
+    tooltip.style.transform = `scale(${1 / scale}) translate(${offsetX}px, ${offsetY}px)`;
+    tooltip.style.transformOrigin = "top left";
+
+    lastScale = scale;
+    lastOffsetX = offsetX;
+    lastOffsetY = offsetY;
+  }
+
+  // Listen for zoom or scroll changes
+  window.visualViewport.addEventListener("scroll", updateTooltipPosition);
+  window.visualViewport.addEventListener("resize", updateTooltipPosition);
+  window.visualViewport.addEventListener("zoom", updateTooltipPosition);
+
+  // Adjust on orientation change or load
+  window.addEventListener("orientationchange", updateTooltipPosition);
+  window.addEventListener("load", updateTooltipPosition);
+}
 
 
 </script>
