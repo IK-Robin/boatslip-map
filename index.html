@@ -2664,7 +2664,7 @@
     'ikr_svg'
   )
 
-  ikrZoom(ikr_svg);
+ 
   const Shape = ikr_svg.getElementById('slip_with_id')
 
 
@@ -2875,6 +2875,7 @@
 
     } else {
       // Desktop: normal hover
+       ikrZoom(ikr_svg);
       el.addEventListener("mouseenter", (ev) => handleShow(ev, el, mapD));
       el.addEventListener("mousemove", (ev) => handleShow(ev, el, mapD));
       el.addEventListener("mouseleave", () => handleHide(el));
