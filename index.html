@@ -3192,14 +3192,12 @@
 
   // Define a breakpoint value (you can adjust this based on your needs)
 
-  if (window.visualViewport && /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+if (window.visualViewport && /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
   const tooltip = document.getElementById("ikr_toltipMove");
+  let isPinching = false;
+  let pinchTimeout;
 
   // Track viewport scale and position
-  let lastScale = 1;
-  let lastOffsetX = 0;
-  let lastOffsetY = 0;
-
   function updateTooltipPosition() {
     if (!tooltip || tooltip.style.display === "none") return;
 
@@ -3209,51 +3207,53 @@
 
     tooltip.style.transform = `scale(${1 / scale}) translate(${offsetX}px, ${offsetY}px)`;
     tooltip.style.transformOrigin = "top left";
-
-    lastScale = scale;
-    lastOffsetX = offsetX;
-    lastOffsetY = offsetY;
   }
 
-  // ✅ When the user clicks/taps on the map, show tooltip at screen center
-  document.addEventListener("click", (e) => {
-    if (!tooltip) return;
-
-    // Only trigger if on mobile and tooltip is meant to show
-    if (tooltip.innerHTML.trim() !== "") {
-      tooltip.style.display = "block";
-
-      // Get current viewport dimensions
-      const viewportWidth = window.visualViewport.width;
-      const viewportHeight = window.visualViewport.height;
-
-      // Calculate center position
-      const tooltipWidth = tooltip.offsetWidth;
-      const tooltipHeight = tooltip.offsetHeight;
-
-      // Center tooltip on visible screen
-      const centerLeft =
-        (viewportWidth / 2 - tooltipWidth / 2) + window.visualViewport.offsetLeft;
-      const centerTop =
-        (viewportHeight / 2 - tooltipHeight / 2) + window.visualViewport.offsetTop;
-
-      // Apply position
-      tooltip.style.left = `${centerLeft}px`;
-      tooltip.style.top = `${centerTop}px`;
-      tooltip.style.transform = `scale(${1 / window.visualViewport.scale})`;
-      tooltip.style.transformOrigin = "top left";
+  // ✅ Detect pinch zoom (touch gestures)
+  document.addEventListener("touchstart", (e) => {
+    if (e.touches.length === 2) {
+      isPinching = true;
+      clearTimeout(pinchTimeout);
     }
   });
 
-  // Listen for zoom or scroll changes
+  document.addEventListener("touchend", (e) => {
+    // If pinch ended, reset after short delay
+    if (e.touches.length < 2 && isPinching) {
+      pinchTimeout = setTimeout(() => {
+        isPinching = false;
+      }, 200);
+    }
+  });
+
+  // ✅ Only center tooltip on single-finger taps (not pinches)
+  document.addEventListener("click", (e) => {
+    if (isPinching || !tooltip) return; // skip if pinch gesture
+    if (tooltip.innerHTML.trim() === "") return;
+
+    tooltip.style.display = "block";
+
+    // Get current viewport visible area
+    const v = window.visualViewport;
+    const tooltipWidth = tooltip.offsetWidth;
+    const tooltipHeight = tooltip.offsetHeight;
+
+    const centerLeft = (v.width / 2 - tooltipWidth / 2) + v.offsetLeft;
+    const centerTop = (v.height / 2 - tooltipHeight / 2) + v.offsetTop;
+
+    tooltip.style.left = `${centerLeft}px`;
+    tooltip.style.top = `${centerTop}px`;
+    tooltip.style.transform = `scale(${1 / v.scale})`;
+    tooltip.style.transformOrigin = "top left";
+  });
+
+  // Keep tooltip aligned with zoomed viewport
   window.visualViewport.addEventListener("scroll", updateTooltipPosition);
   window.visualViewport.addEventListener("resize", updateTooltipPosition);
   window.visualViewport.addEventListener("zoom", updateTooltipPosition);
 
-  // Adjust on orientation change or load
   window.addEventListener("orientationchange", updateTooltipPosition);
   window.addEventListener("load", updateTooltipPosition);
 }
-
 
 </script>
