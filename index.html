@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 
   <title>interactive map </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -3203,12 +3204,10 @@
   function updateTooltipPosition() {
     if (!tooltip || tooltip.style.display === "none") return;
 
-    // Adjust tooltip to match the new zoom level
     const scale = window.visualViewport.scale;
     const offsetX = window.visualViewport.offsetLeft;
     const offsetY = window.visualViewport.offsetTop;
 
-    // Apply transform to keep tooltip aligned
     tooltip.style.transform = `scale(${1 / scale}) translate(${offsetX}px, ${offsetY}px)`;
     tooltip.style.transformOrigin = "top left";
 
@@ -3216,6 +3215,36 @@
     lastOffsetX = offsetX;
     lastOffsetY = offsetY;
   }
+
+  // ✅ When the user clicks/taps on the map, show tooltip at screen center
+  document.addEventListener("click", (e) => {
+    if (!tooltip) return;
+
+    // Only trigger if on mobile and tooltip is meant to show
+    if (tooltip.innerHTML.trim() !== "") {
+      tooltip.style.display = "block";
+
+      // Get current viewport dimensions
+      const viewportWidth = window.visualViewport.width;
+      const viewportHeight = window.visualViewport.height;
+
+      // Calculate center position
+      const tooltipWidth = tooltip.offsetWidth;
+      const tooltipHeight = tooltip.offsetHeight;
+
+      // Center tooltip on visible screen
+      const centerLeft =
+        (viewportWidth / 2 - tooltipWidth / 2) + window.visualViewport.offsetLeft;
+      const centerTop =
+        (viewportHeight / 2 - tooltipHeight / 2) + window.visualViewport.offsetTop;
+
+      // Apply position
+      tooltip.style.left = `${centerLeft}px`;
+      tooltip.style.top = `${centerTop}px`;
+      tooltip.style.transform = `scale(${1 / window.visualViewport.scale})`;
+      tooltip.style.transformOrigin = "top left";
+    }
+  });
 
   // Listen for zoom or scroll changes
   window.visualViewport.addEventListener("scroll", updateTooltipPosition);
