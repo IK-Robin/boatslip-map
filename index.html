@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=yes">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>interactive map </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2862,6 +2861,9 @@
   const controls = document.getElementById("controls");
   controls.style.display = "none"; // Hide controls on mobile
 
+
+
+  
   // Debounce function to prevent rapid successive calls
   function debounce(func, wait) {
     let timeout;
@@ -3192,62 +3194,5 @@
 
   // Define a breakpoint value (you can adjust this based on your needs)
 
-if (window.visualViewport && /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
-  const tooltip = document.getElementById("ikr_toltipMove");
-  let isPinching = false;
-  let pinchTimeout;
-
-  function updateTooltipTransform() {
-    if (!tooltip || tooltip.style.display === "none") return;
-
-    const v = window.visualViewport;
-    tooltip.style.transform = `scale(${1 / v.scale})`;
-    tooltip.style.transformOrigin = "top left";
-  }
-
-  // Detect pinch gestures (two fingers)
-  document.addEventListener("touchstart", (e) => {
-    if (e.touches.length === 2) {
-      isPinching = true;
-      clearTimeout(pinchTimeout);
-    }
-  });
-
-  document.addEventListener("touchend", (e) => {
-    if (e.touches.length < 2 && isPinching) {
-      pinchTimeout = setTimeout(() => {
-        isPinching = false;
-      }, 200);
-    }
-  });
-
-  // ✅ Show tooltip at exact center of visible screen
-  document.addEventListener("click", (e) => {
-    if (isPinching || !tooltip) return; // skip if user is pinching
-
-    if (tooltip.innerHTML.trim() === "") return;
-    tooltip.style.display = "block";
-
-    const v = window.visualViewport;
-    const tooltipWidth = tooltip.offsetWidth;
-    const tooltipHeight = tooltip.offsetHeight;
-
-    // Center relative to *visible viewport*, not full page
-    const centerLeft = v.pageLeft + (v.width / 2 - tooltipWidth / 2);
-    const centerTop = v.pageTop + (v.height / 2 - tooltipHeight / 2);
-
-    tooltip.style.left = `${centerLeft}px`;
-    tooltip.style.top = `${centerTop}px`;
-    tooltip.style.transform = `scale(${1 / v.scale})`;
-    tooltip.style.transformOrigin = "top left";
-  });
-
-  // Keep tooltip aligned on zoom or scroll
-  window.visualViewport.addEventListener("resize", updateTooltipTransform);
-  window.visualViewport.addEventListener("scroll", updateTooltipTransform);
-  window.visualViewport.addEventListener("zoom", updateTooltipTransform);
-  window.addEventListener("orientationchange", updateTooltipTransform);
-  window.addEventListener("load", updateTooltipTransform);
-}
 
 </script>
