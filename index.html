@@ -2830,6 +2830,7 @@
     placeSmartInContainer(tooltipMove, ev, 12);
   }
 
+     ikrZoom(ikr_svg);
   function handleHideOnMobile(ct) {
     if (ct) {
       setTimeout(() => {
@@ -2892,7 +2893,7 @@
   });
 }else {
       // Desktop: normal hover
-       ikrZoom(ikr_svg);
+    
       el.addEventListener("mouseenter", (ev) => handleShow(ev, el, mapD));
       el.addEventListener("mousemove", (ev) => handleShow(ev, el, mapD));
       el.addEventListener("mouseleave", () => handleHide(el));
